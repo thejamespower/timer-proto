@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Countdown from 'react-sexy-countdown'
 
-const TimerList = ({ timers }) => timers.map(timer => <Countdown key={timer.id} date={timer.date} />)
+import Timer from '../Timer'
+
+const TimerList = ({ timers }) => timers.map(timer => <Timer key={timer.id} timer={timer} />)
 
 TimerList.propTypes = {
   timers: PropTypes.arrayOf(
