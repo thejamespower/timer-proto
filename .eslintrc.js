@@ -8,6 +8,7 @@ module.exports = {
       'ignoreTrailingComments': true,
     }]
   },
+  'parser': 'babel-eslint',
   'env': {
     'browser': true,
   },

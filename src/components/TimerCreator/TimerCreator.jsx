@@ -2,54 +2,58 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
 import TimeField from 'react-simple-timefield'
+import Button from '@material-ui/core/Button'
+
 
 class TimerCreator extends Component {
+  static propTypes = {
+    createdTimer: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+  }
+
   constructor(props) {
     super(props)
     this.state = {
-      time: '00:00',
+      duration: '00:00',
+      active: false,
     }
 
     this.handleTimeChange = this.handleTimeChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleTimeChange(time) {
-    this.setState({ time })
+  handleTimeChange(duration) {
+    this.setState({ duration })
   }
 
   handleClick() {
-    const { createdTimer } = this.props
-    const { time } = this.state
-    const duration = moment.duration(time)
-
+    const { createdTimer, name } = this.props
+    const { duration, active } = this.state
     createdTimer({
-      date: moment().add(duration),
+      duration,
       id: moment().format(),
+      name,
+      active,
     })
   }
 
   render() {
-    const { time } = this.state
+    const { duration } = this.state
 
     return (
       <div>
-        <TimeField value={time} onChange={this.handleTimeChange} showSeconds />
-        <button
+        <TimeField value={duration} onChange={this.handleTimeChange} showSeconds />
+        <Button
           type="submit"
           onClick={() => {
             this.handleClick()
           }}
         >
 Create timer
-        </button>
+        </Button>
       </div>
     )
   }
-}
-
-TimerCreator.propTypes = {
-  createdTimer: PropTypes.func.isRequired,
 }
 
 export default TimerCreator
