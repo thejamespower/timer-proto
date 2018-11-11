@@ -4,6 +4,7 @@ import moment from 'moment'
 import TimeField from 'react-simple-timefield'
 import Button from '@material-ui/core/Button'
 
+const zeroDuration = '00:00:00'
 
 class TimerCreator extends Component {
   static propTypes = {
@@ -14,7 +15,7 @@ class TimerCreator extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      duration: '00:00',
+      duration: zeroDuration,
       active: false,
     }
 
@@ -29,6 +30,9 @@ class TimerCreator extends Component {
   handleClick() {
     const { createdTimer, name } = this.props
     const { duration, active } = this.state
+
+    if (duration === zeroDuration) return
+
     createdTimer({
       duration,
       id: moment().format(),

@@ -4,11 +4,15 @@ import Countdown from 'react-sexy-countdown'
 import moment from 'moment'
 
 const Timer = ({ timer }) => {
-  const { name, duration, active } = timer
+  const {
+    name, duration, active, timeToStart,
+  } = timer
   return (
     <div>
       <p>{name}</p>
-      {active ? (<Countdown date={moment().add(moment.duration(duration))} />) : <p>{duration}</p>}
+      {active ? (
+        <Countdown date={moment().add(moment.duration(duration))} />
+      ) : <p>{duration}, Time to start: {timeToStart}</p>}
     </div>
   )
 }

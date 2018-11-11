@@ -6,7 +6,8 @@ module.exports = {
     'max-len': ['error', {
       'code': 120,
       'ignoreTrailingComments': true,
-    }]
+    }],
+    'react/jsx-one-expression-per-line': 'off',
   },
   'parser': 'babel-eslint',
   'env': {

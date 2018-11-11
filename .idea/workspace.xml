@@ -5,37 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/App/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Router/Router.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Router/container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Shell/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AddItem/AddItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AddItem/container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AddItem/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home/container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/Shell.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shell.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/Shell.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timer/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timer/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerCreator/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerCreator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerList/TimerList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerList/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerList/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/container.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,25 +31,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="577">
+              <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducer.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="211">
+              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -90,49 +68,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/AddItem/AddItem.jsx">
+        <entry file="file://$PROJECT_DIR$/.eslintrc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/TimerList/container.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Timer/container.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -157,15 +96,19 @@
       <find>timerCreated</find>
       <find>actionTypes</find>
       <find>App</find>
-      <find>TimerList</find>
       <find>but</find>
       <find>button</find>
       <find>'material-ui</find>
       <find>§</find>
       <find>babel</find>
-      <find>&quot;</find>
       <find>date</find>
       <find>handleClick</find>
+      <find>TimerList</find>
+      <find>Interger</find>
+      <find>superTimer</find>
+      <find>totalDurationInSeconds</find>
+      <find>totalDuration</find>
+      <find>&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>createdTimer</replace>
@@ -174,8 +117,11 @@
       <replace>TimerCreator</replace>
       <replace>Button</replace>
       <replace>'@material-ui/core</replace>
-      <replace>'</replace>
       <replace>handleSubmit</replace>
+      <replace>Home</replace>
+      <replace>Integer</replace>
+      <replace>totalDurationInSeconds</replace>
+      <replace>'</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/TimerCreator</dir>
@@ -196,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/home.jsx" />
         <option value="$PROJECT_DIR$/src/Shell.jsx" />
         <option value="$PROJECT_DIR$/src/TimerList/index.js" />
-        <option value="$PROJECT_DIR$/src/reducer.js" />
         <option value="$PROJECT_DIR$/src/store.js" />
         <option value="$PROJECT_DIR$/src/TimerList/container.js" />
         <option value="$PROJECT_DIR$/config/jest/cssTransform.js" />
@@ -222,15 +167,18 @@
         <option value="$PROJECT_DIR$/src/components/Router/index.js" />
         <option value="$PROJECT_DIR$/src/components/App/App.jsx" />
         <option value="$PROJECT_DIR$/src/views/Home/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Home/container.js" />
-        <option value="$PROJECT_DIR$/src/views/Home/Home.jsx" />
         <option value="$PROJECT_DIR$/src/views/AddItem/container.js" />
         <option value="$PROJECT_DIR$/src/components/Router/Router.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.eslintrc.js" />
         <option value="$PROJECT_DIR$/src/views/AddItem/AddItem.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Timer/Timer.jsx" />
+        <option value="$PROJECT_DIR$/src/views/Home/container.js" />
+        <option value="$PROJECT_DIR$/src/views/Home/Home.jsx" />
         <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" />
+        <option value="$PROJECT_DIR$/src/components/TimerList/container.js" />
+        <option value="$PROJECT_DIR$/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/src/components/Timer/Timer.jsx" />
+        <option value="$PROJECT_DIR$/src/reducer.js" />
+        <option value="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" />
       </list>
     </option>
   </component>
@@ -281,13 +229,6 @@
               <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="TimerCreator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="TimerList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,7 +242,7 @@
               <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="AddItem" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
@@ -405,7 +346,7 @@
       <workItem from="1541249434462" duration="95000" />
       <workItem from="1541249530830" duration="12518000" />
       <workItem from="1541343950252" duration="4384000" />
-      <workItem from="1541759052461" duration="6748000" />
+      <workItem from="1541759052461" duration="13636000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -421,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541335873770</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create a list of non-active timers with names">
+      <created>1541852694099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541852694100</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -430,19 +378,41 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23281000" />
+    <option name="totallyTimeSpent" value="30169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7077827" visible="true" weight="0.17420132" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7077827" visible="true" weight="0.17420132" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.2922173" side_tool="true" weight="0.17420132" />
+      <window_info id="Favorites" order="3" sideWeight="0.2922173" side_tool="true" visible="true" weight="0.17420132" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996986" visible="true" weight="0.29356846" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50030136" side_tool="true" weight="0.29356846" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32572615" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32987553" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32987553" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7077827" visible="true" weight="0.17420132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.2922173" side_tool="true" visible="true" weight="0.17420132" />
       <window_info id="Favorites" order="3" sideWeight="0.28931752" side_tool="true" weight="0.17420132" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29356846" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29356846" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -456,7 +426,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -506,7 +476,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="TimerList basic" />
     <MESSAGE value="TimerList, TimerCreator, Timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="TimerList, TimerCreator, Timer" />
+    <MESSAGE value="Create a list of non-active timers with names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a list of non-active timers with names" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -725,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Home/container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Home/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -750,16 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Home/Home.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Timer/container.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -807,27 +754,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Home/Home.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/AddItem/AddItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="270">
+          <caret line="12" column="5" lean-forward="true" selection-end-line="40" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerList/container.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Home/container.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
@@ -847,32 +794,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerList/container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="211">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx">
+    <entry file="file://$PROJECT_DIR$/src/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="577">
+          <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
