@@ -4,10 +4,11 @@ import TimerList from './TimerList'
 
 const mapStateToProps = state => ({
   timers: state.timers.timers,
-  superTimer: state.timers.superTimer,
 })
+
+const mapDispatchToProps = null
 
 export default connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(TimerList)

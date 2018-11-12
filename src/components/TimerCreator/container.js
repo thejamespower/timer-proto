@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import TimerCreator from './TimerCreator'
-import createdTimer from '../../action-creators'
+import { createdTimer } from '../../action-creators'
 
 const mapStateToProps = null
 

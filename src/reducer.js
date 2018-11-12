@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 import { Record } from 'immutable'
-import CREATED_TIMER from './action-types'
+import { CREATED_TIMER, SUPER_TIMER_STARTED } from './action-types'
 
 const InitialState = new Record({
   timers: [],
@@ -8,6 +8,7 @@ const InitialState = new Record({
     duration: '00:00:00',
     durationInSeconds: 0,
     active: false,
+    currentTime: null,
   },
 })
 
@@ -46,10 +47,17 @@ const timers = handleActions({
     const transformedOldTimers = oldTimers.map(x => transformTimer(x))
     const newTimersToAdd = [...transformedOldTimers, newTimerToAdd]
 
-    return state
+    return (action.payload.duration === 0) ? state : state
       .set('timers', newTimersToAdd)
       .setIn(['superTimer', 'duration'], convertSecondsToDuration(totalDurationInSeconds))
       .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds)
+  },
+  [SUPER_TIMER_STARTED]: (state) => {
+    const start = (s) => {
+      console.log('start')
+      return s.setIn(['superTimer', 'active'], true)
+    }
+    return (state.timers.length === 0) ? state : start(state)
   },
 }, initialState)
 
