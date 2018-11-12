@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Countdown from 'react-sexy-countdown'
+import Countdown from 'react-countdown-now'
 import moment from 'moment'
 import Button from '@material-ui/core/Button/Button'
 
@@ -36,7 +36,7 @@ class SuperTimer extends Component {
           {duration}
         </p>
         {active ? (
-          <Countdown date={moment().add(moment.duration(duration))} />
+          <Countdown date={moment().add(moment.duration(duration))} dayInHours />
         ) : null}
         <Button type="submit" onClick={this.handleSubmitClick}>Start</Button>
       </div>
