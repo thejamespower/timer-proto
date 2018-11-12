@@ -21,7 +21,15 @@ const convertDurationToSeconds = (duration) => {
 
 const convertSecondsToDuration = durationInSeconds => new Date(durationInSeconds * 1000).toISOString().substr(11, 8)
 
-const timers = handleActions({
+const getTotalDurationInSeconds = timers => Math.max(...timers.map(x => x.durationInSeconds))
+
+const transformTimer = (x, totalDurationInSeconds) => ({
+  ...x,
+  timeToStartInSeconds: totalDurationInSeconds - x.durationInSeconds,
+  timeToStart: convertSecondsToDuration(totalDurationInSeconds - x.durationInSeconds),
+})
+
+const timersReducers = handleActions({
   [CREATED_TIMER]: (state, action) => {
     const timer = {
       ...action.payload,
@@ -29,7 +37,7 @@ const timers = handleActions({
     }
     const newTimers = [...state.get('timers'), timer]
 
-    const totalDurationInSeconds = Math.max(...newTimers.map(x => x.durationInSeconds))
+    const totalDurationInSeconds = getTotalDurationInSeconds(newTimers)
 
     const newTimerToAdd = {
       ...timer,
@@ -37,14 +45,8 @@ const timers = handleActions({
       timeToStart: convertSecondsToDuration(totalDurationInSeconds - convertDurationToSeconds(action.payload.duration)),
     }
 
-    const transformTimer = x => ({
-      ...x,
-      timeToStartInSeconds: totalDurationInSeconds - x.durationInSeconds,
-      timeToStart: convertSecondsToDuration(totalDurationInSeconds - x.durationInSeconds),
-    })
-
     const oldTimers = state.get('timers')
-    const transformedOldTimers = oldTimers.map(x => transformTimer(x))
+    const transformedOldTimers = oldTimers.map(x => transformTimer(x, totalDurationInSeconds))
     const newTimersToAdd = [...transformedOldTimers, newTimerToAdd]
 
     return (action.payload.duration === 0) ? state : state
@@ -52,10 +54,20 @@ const timers = handleActions({
       .setIn(['superTimer', 'duration'], convertSecondsToDuration(totalDurationInSeconds))
       .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds)
   },
-  [TIMER_DELETED]: (state, payload) => {
-    console.log(payload)
+
+  [TIMER_DELETED]: (state, action) => {
+    if (!action.payload.length) {
+      return state
+    }
+    const timers = [...state.get('timers').filter(x => x.id !== action.payload)]
+    const totalDurationInSeconds = getTotalDurationInSeconds(timers)
+    const transformedTimers = timers.map(x => transformTimer(x, totalDurationInSeconds))
     return state
+      .set('timers', transformedTimers)
+      .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds)
+      .setIn(['superTimer', 'duration'], convertSecondsToDuration(totalDurationInSeconds))
   },
+
   [SUPER_TIMER_STARTED]: (state) => {
     const start = (s) => {
       console.log('start')
@@ -65,4 +77,4 @@ const timers = handleActions({
   },
 }, initialState)
 
-export default timers
+export default timersReducers
