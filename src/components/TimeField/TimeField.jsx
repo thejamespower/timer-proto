@@ -23,7 +23,7 @@ export default class CustomTimeField extends React.Component {
     super(...args)
 
     this.state = {
-      value: args.value || '00:00:00'
+      value: args.value || '00:00:00',
     }
 
     this.onChange = this.onChange.bind(this)
