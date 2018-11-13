@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import Countdown from 'react-countdown-now'
 import moment from 'moment'
 import Button from '@material-ui/core/Button/Button'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Typography from '@material-ui/core/Typography'
 
 class SuperTimer extends Component {
   static propTypes = {
@@ -31,15 +35,19 @@ class SuperTimer extends Component {
       duration, active,
     } = superTimer
     return (
-      <div>
-        <p>Total:
-          {duration}
-        </p>
-        {active ? (
-          <Countdown date={moment().add(moment.duration(duration))} dayInHours />
-        ) : null}
-        <Button type="submit" onClick={this.handleSubmitClick}>Start</Button>
-      </div>
+      <Card>
+        <CardContent>
+          <Typography color="textSecondary" gutterBottom>
+            Total: {duration}
+          </Typography>
+          {active ? (
+            <Countdown date={moment().add(moment.duration(duration))} dayInHours />
+          ) : null}
+        </CardContent>
+        <CardActions>
+          <Button type="submit" variant="contained" color="primary" onClick={this.handleSubmitClick}>Start</Button>
+        </CardActions>
+      </Card>
     )
   }
 }

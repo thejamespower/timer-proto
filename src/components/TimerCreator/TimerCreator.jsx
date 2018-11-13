@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import TimeField from 'react-simple-timefield'
 import Button from '@material-ui/core/Button'
+
+import CustomTimeField from '../TimeField'
 
 const zeroDuration = '00:00:00'
 
@@ -46,7 +47,7 @@ class TimerCreator extends Component {
 
     return (
       <div>
-        <TimeField value={duration} onChange={this.handleTimeChange} showSeconds />
+        <CustomTimeField value={duration} onChange={this.handleTimeChange} />
         <Button
           type="submit"
           onClick={() => {
