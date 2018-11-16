@@ -138,6 +138,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "hygen-cra": "^1.0.0"
+    "hygen-cra": "^1.0.0",
+    "react-test-renderer": "^16.6.3"
   }
 }

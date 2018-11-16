@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Countdown from 'react-countdown-now'
 import moment from 'moment'
-import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
-import DeleteIcon from '@material-ui/icons/Delete'
+import TimerDeleteButton from '../TimerDeleteButton/TimerDeleteButton'
 
 class Timer extends Component {
   static propTypes = {
@@ -22,6 +20,7 @@ class Timer extends Component {
     }).isRequired,
     deleteTimer: PropTypes.func.isRequired,
     completeTimer: PropTypes.func.isRequired,
+    superTimerActive: PropTypes.bool.isRequired,
   }
 
   constructor(props) {
@@ -52,6 +51,7 @@ class Timer extends Component {
       timer: {
         name, active, timeToStart, id, complete,
       },
+      superTimerActive,
       deleteTimer,
     } = this.props
 
@@ -66,11 +66,13 @@ class Timer extends Component {
           {!active && !complete && <p>{duration}, Time to start: {timeToStart}</p>}
           {complete && <p>Done!</p>}
         </CardContent>
-        {!active && !complete && (
-          <CardActions>
-            <Button onClick={() => deleteTimer(id)}>Delete <DeleteIcon /></Button>
-          </CardActions>
-        )}
+        <TimerDeleteButton
+          onClick={() => deleteTimer(id)}
+          superTimerActive={superTimerActive}
+          active={active}
+          id={id}
+          complete={complete}
+        />
       </Card>
     )
   }

@@ -4,7 +4,9 @@ import { bindActionCreators } from 'redux'
 import Timer from './Timer'
 import { deleteTimer, completeTimer } from '../../action-creators'
 
-const mapStateToProps = null
+const mapStateToProps = state => ({
+  superTimerActive: state.timers.superTimer.active,
+})
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   deleteTimer,

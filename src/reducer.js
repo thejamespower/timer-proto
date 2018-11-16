@@ -25,7 +25,7 @@ const convertDurationToSeconds = (duration) => {
 
 const convertSecondsToDuration = durationInSeconds => new Date(durationInSeconds * 1000).toISOString().substr(11, 8)
 
-const getTotalDurationInSeconds = timers => Math.max(...timers.map(x => x.durationInSeconds))
+const getTotalDurationInSeconds = timers => (timers.length ? Math.max(...timers.map(x => x.durationInSeconds)) : 0)
 
 const timersNewStart = (elapsedTime, totalTime) => (x) => {
   const timeToStartInSeconds = Math.max(0, totalTime - x.durationInSeconds - elapsedTime)
