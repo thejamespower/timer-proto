@@ -1,11 +1,16 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Shell from './Shell'
+import TimeField from './TimeField'
 
-describe('Shell', () => {
+describe('TimeField', () => {
+  const props = {
+    onChange: () => null,
+    value: '',
+  }
+
   it('renders', () => {
     const component = renderer.create(
-      <Shell />,
+      <TimeField {...props} />,
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()

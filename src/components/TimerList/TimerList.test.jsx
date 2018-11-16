@@ -1,11 +1,17 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Shell from './Shell'
+import TimerList from './TimerList'
 
-describe('Shell', () => {
+jest.mock('../SuperTimer', () => 'SuperTimer')
+
+describe('TimerList', () => {
+  const props = {
+    timers: [],
+  }
+
   it('renders', () => {
     const component = renderer.create(
-      <Shell />,
+      <TimerList {...props} />,
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
