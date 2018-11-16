@@ -1,17 +1,21 @@
 import { createAction } from 'redux-actions'
 
 import {
-  CREATED_TIMER, SUPER_TIMER_STARTED, TIMER_DELETED, SUPER_TIMER_TICKED,
+  TIMER_CREATE, SUPER_TIMER_START, TIMER_DELETE, SUPER_TIMER_TICK, TIMER_COMPLETE, SUPER_TIMER_COMPLETE,
 } from './action-types'
 
-const createdTimer = payload => createAction(CREATED_TIMER)(payload)
-const timerDeleted = payload => createAction(TIMER_DELETED)(payload)
-const superTimerStarted = payload => createAction(SUPER_TIMER_STARTED)(payload)
-const superTimerTicked = payload => createAction(SUPER_TIMER_TICKED)(payload)
+const createTimer = payload => createAction(TIMER_CREATE)(payload)
+const deleteTimer = payload => createAction(TIMER_DELETE)(payload)
+const completeTimer = payload => createAction(TIMER_COMPLETE)(payload)
+const startSuperTimer = payload => createAction(SUPER_TIMER_START)(payload)
+const tickSuperTimer = payload => createAction(SUPER_TIMER_TICK)(payload)
+const completeSuperTimer = payload => createAction(SUPER_TIMER_COMPLETE)(payload)
 
 export {
-  createdTimer,
-  timerDeleted,
-  superTimerStarted,
-  superTimerTicked,
+  createTimer,
+  deleteTimer,
+  completeTimer,
+  startSuperTimer,
+  tickSuperTimer,
+  completeSuperTimer,
 }

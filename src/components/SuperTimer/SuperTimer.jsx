@@ -14,10 +14,12 @@ class SuperTimer extends Component {
       duration: PropTypes.string.isRequired,
       durationInSeconds: PropTypes.number.isRequired,
       active: PropTypes.bool.isRequired,
+      complete: PropTypes.bool.isRequired,
       currentCount: PropTypes.number,
     }).isRequired,
-    superTimerStarted: PropTypes.func.isRequired,
-    superTimerTicked: PropTypes.func.isRequired,
+    startSuperTimer: PropTypes.func.isRequired,
+    tickSuperTimer: PropTypes.func.isRequired,
+    completeSuperTimer: PropTypes.func.isRequired,
   }
 
   constructor(props) {
@@ -25,6 +27,7 @@ class SuperTimer extends Component {
 
     this.handleSubmitClick = this.handleSubmitClick.bind(this)
     this.handleTick = this.handleTick.bind(this)
+    this.handleComplete = this.handleComplete.bind(this)
   }
 
   shouldComponentUpdate(nextProps) {
@@ -33,19 +36,24 @@ class SuperTimer extends Component {
   }
 
   handleSubmitClick() {
-    const { superTimerStarted } = this.props
-    superTimerStarted()
+    const { startSuperTimer } = this.props
+    startSuperTimer()
   }
 
   handleTick({ total }) {
-    const { superTimerTicked } = this.props
-    superTimerTicked(total / 1000)
+    const { tickSuperTimer } = this.props
+    tickSuperTimer(total / 1000)
+  }
+
+  handleComplete() {
+    const { completeSuperTimer } = this.props
+    completeSuperTimer()
   }
 
   render() {
     const { superTimer } = this.props
     const {
-      duration, active,
+      duration, active, complete,
     } = superTimer
     return (
       <Card>
@@ -53,9 +61,14 @@ class SuperTimer extends Component {
           <Typography color="textSecondary" gutterBottom>
             Total: {duration}
           </Typography>
-          {active ? (
-            <Countdown date={moment().add(moment.duration(duration))} dayInHours onTick={this.handleTick} />
-          ) : null}
+          {active && !complete && (
+          <Countdown
+            date={moment().add(moment.duration(duration))}
+            dayInHours
+            onTick={this.handleTick}
+            onComplete={this.handleComplete}
+          />)}
+          {complete && <p>All done!</p>}
         </CardContent>
         <CardActions>
           <Button type="submit" variant="contained" color="primary" onClick={this.handleSubmitClick}>Start</Button>

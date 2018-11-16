@@ -9,7 +9,7 @@ const zeroDuration = '00:00:00'
 
 class TimerCreator extends Component {
   static propTypes = {
-    createdTimer: PropTypes.func.isRequired,
+    createTimer: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
   }
 
@@ -17,7 +17,6 @@ class TimerCreator extends Component {
     super(props)
     this.state = {
       duration: zeroDuration,
-      active: false,
     }
 
     this.handleTimeChange = this.handleTimeChange.bind(this)
@@ -29,16 +28,15 @@ class TimerCreator extends Component {
   }
 
   handleClick() {
-    const { createdTimer, name } = this.props
-    const { duration, active } = this.state
+    const { createTimer, name } = this.props
+    const { duration } = this.state
 
     if (duration === zeroDuration) return
 
-    createdTimer({
+    createTimer({
       duration,
-      id: moment().format(),
+      id: `${moment().format()}-${Math.random()}`,
       name,
-      active,
     })
   }
 

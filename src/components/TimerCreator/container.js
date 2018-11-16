@@ -2,12 +2,12 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import TimerCreator from './TimerCreator'
-import { createdTimer } from '../../action-creators'
+import { createTimer } from '../../action-creators'
 
 const mapStateToProps = null
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  createdTimer,
+  createTimer,
 }, dispatch)
 
 export default connect(
