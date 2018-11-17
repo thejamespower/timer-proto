@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button'
 import TimerCreator from './TimerCreator'
 import CustomTimeField from '../TimeField'
 
+jest.mock('uuid/v4', () => () => '1')
+
 describe('TimerCreator', () => {
   let props
   beforeEach(() => {
