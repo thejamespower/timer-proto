@@ -7,20 +7,24 @@ import Timer from './Timer'
 jest.mock('../TimerDeleteButton', () => () => 'TimerDeleteButton')
 
 describe('Timer', () => {
-  let props = {
-    timer: {
-      id: 'test',
-      duration: '00:00:00',
-      durationInSeconds: 0,
-      name: '',
-      active: false,
-      timeToStart: '00:00:00',
-      timeToStartInSeconds: 0,
-      complete: false,
-    },
-    completeTimer: () => null,
-    superTimerActive: false,
-  }
+  let props
+
+  beforeEach(() => {
+    props = {
+      timer: {
+        id: 'test',
+        duration: '00:00:00',
+        durationInSeconds: 0,
+        name: '',
+        active: false,
+        timeToStart: '00:00:00',
+        timeToStartInSeconds: 0,
+        complete: false,
+      },
+      completeTimer: () => null,
+      superTimerActive: false,
+    }
+  })
 
   describe('render', () => {
     it('renders default state', () => {
@@ -32,15 +36,13 @@ describe('Timer', () => {
     })
 
     it('renders active state', () => {
-      props = {
-        ...props,
-        timer: {
-          ...props.timer,
-          active: true,
-          duration: '00:00:01',
-          durationInSeconds: 1,
-        },
+      props.timer = {
+        ...props.timer,
+        active: true,
+        duration: '00:00:01',
+        durationInSeconds: 1,
       }
+
       const component = renderer.create(
         <Timer {...props} />,
       )
@@ -49,14 +51,12 @@ describe('Timer', () => {
     })
 
     it('renders complete state', () => {
-      props = {
-        ...props,
-        timer: {
-          ...props.timer,
-          active: false,
-          complete: true,
-        },
+      props.timer = {
+        ...props.timer,
+        active: false,
+        complete: true,
       }
+
       const component = renderer.create(
         <Timer {...props} />,
       )
@@ -67,14 +67,8 @@ describe('Timer', () => {
 
   describe('behaviour', () => {
     it('handles timer completion', () => {
-      props = {
-        ...props,
-        timer: {
-          ...props.timer,
-          active: true,
-        },
-        completeTimer: jest.fn(),
-      }
+      props.timer.active = true
+      props.completeTimer = jest.fn()
 
       const wrapper = mount(<Timer {...props} />)
       const countdown = wrapper.find(Countdown)
@@ -84,13 +78,6 @@ describe('Timer', () => {
     })
 
     it('updates if active changes', () => {
-      props = {
-        ...props,
-        timer: {
-          ...props.timer,
-          active: false,
-        },
-      }
       const wrapper = shallow(<Timer {...props} />)
       const nextProps = {
         ...props,
