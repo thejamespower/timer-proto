@@ -1,6 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SuperTimer renders 1`] = `
+exports[`SuperTimer render renders active state 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+>
+  <div
+    className="MuiCardContent-root-29"
+  >
+    <p
+      className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-63 MuiTypography-gutterBottom-57"
+    >
+      Total: 
+      00:00:00
+    </p>
+    <span>
+      0
+      :
+      00
+      :
+      00
+      :
+      00
+    </span>
+  </div>
+  <div
+    className="MuiCardActions-root-65"
+  >
+    <button
+      className="MuiButtonBase-root-93 MuiButton-root-67 MuiButton-contained-78 MuiButton-containedPrimary-79 MuiButton-raised-81 MuiButton-raisedPrimary-82 MuiCardActions-action-66"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="submit"
+    >
+      <span
+        className="MuiButton-label-68"
+      >
+        Start
+      </span>
+      <span
+        className="MuiTouchRipple-root-96"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SuperTimer render renders complete state 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+>
+  <div
+    className="MuiCardContent-root-29"
+  >
+    <p
+      className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-63 MuiTypography-gutterBottom-57"
+    >
+      Total: 
+      00:00:00
+    </p>
+    <p>
+      All done!
+    </p>
+  </div>
+  <div
+    className="MuiCardActions-root-65"
+  >
+    <button
+      className="MuiButtonBase-root-93 MuiButton-root-67 MuiButton-contained-78 MuiButton-containedPrimary-79 MuiButton-raised-81 MuiButton-raisedPrimary-82 MuiCardActions-action-66"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="submit"
+    >
+      <span
+        className="MuiButton-label-68"
+      >
+        Start
+      </span>
+      <span
+        className="MuiTouchRipple-root-96"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SuperTimer render renders default state 1`] = `
 <div
   className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
 >
