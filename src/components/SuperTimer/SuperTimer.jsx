@@ -36,7 +36,8 @@ class SuperTimer extends Component {
   }
 
   handleSubmitClick() {
-    const { startSuperTimer } = this.props
+    const { startSuperTimer, superTimer: { duration } } = this.props
+    if (duration === '00:00:00') return
     startSuperTimer()
   }
 
@@ -71,7 +72,14 @@ class SuperTimer extends Component {
           {complete && <p>All done!</p>}
         </CardContent>
         <CardActions>
-          <Button type="submit" variant="contained" color="primary" onClick={this.handleSubmitClick}>Start</Button>
+          <Button
+            disabled={duration === '00:00:00'}
+            type="submit"
+            variant="contained"
+            color="primary"
+            onClick={this.handleSubmitClick}
+          >Start
+          </Button>
         </CardActions>
       </Card>
     )
