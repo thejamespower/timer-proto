@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/All_Tests.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shell/__snapshots__/Shell.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/__snapshots__/Shell.test.jsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimeField/container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimeField/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,14 +26,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cooking_timer$All_Tests.info" NAME="All Tests Coverage Results" MODIFIED="1542453325706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cooking_timer$All_Tests.info" NAME="All Tests Coverage Results" MODIFIED="1542454918476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cooking_timer$Timer_test_jsx.info" NAME="Timer.test.jsx Coverage Results" MODIFIED="1542443572256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cooking_timer$TimerList.info" NAME="TimerList Coverage Results" MODIFIED="1542442757390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cooking_timer$TimerCreator.info" NAME="TimerCreator Coverage Results" MODIFIED="1542453459570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cooking_timer$Timer.info" NAME="Timer Coverage Results" MODIFIED="1542443941413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
   </component>
   <component name="CoverageViewManager">
     <option name="myAutoScrollToSource" value="true" />
-    <option name="myElementSize" value="453" />
+    <option name="myElementSize" value="15" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="cooking-timer" />
@@ -35,13 +45,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="258">
+              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-483">
+              <caret line="3" selection-start-line="3" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -147,13 +166,11 @@
         <option value="$PROJECT_DIR$/src/views/Home/Home.jsx" />
         <option value="$PROJECT_DIR$/src/views/Home/container.js" />
         <option value="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimeField/index.js" />
         <option value="$PROJECT_DIR$/src/components/TimeField/container.js" />
         <option value="$PROJECT_DIR$/src/components/TimeField/TimeField.jsx" />
         <option value="$PROJECT_DIR$/src/components/TimerList/container.js" />
         <option value="$PROJECT_DIR$/src/components/TimerCreator/container.js" />
         <option value="$APPLICATION_CONFIG_DIR$/keymaps/Default copy1.xml" />
-        <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" />
         <option value="$PROJECT_DIR$/src/action-types.js" />
         <option value="$PROJECT_DIR$/src/components/SuperTimer/container.js" />
         <option value="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.jsx" />
@@ -170,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/TimeField/TimeField.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/Shell/Shell.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx" />
         <option value="$PROJECT_DIR$/config/jest/overrides.js" />
@@ -182,6 +198,9 @@
         <option value="$PROJECT_DIR$/src/components/Timer/Timer.jsx" />
         <option value="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" />
+        <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" />
+        <option value="$PROJECT_DIR$/src/components/TimeField/index.js" />
+        <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
       </list>
     </option>
   </component>
@@ -243,14 +262,14 @@
               <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Timer" type="462c0819:PsiDirectoryNode" />
+              <item name="TimeField" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
               <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="TimerDeleteButton" type="462c0819:PsiDirectoryNode" />
+              <item name="TimerCreator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
@@ -278,6 +297,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
@@ -310,7 +330,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.All Tests">
+  <component name="RunManager" selected="Jest.TimerCreator">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch --coverage --updateSnapshot" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
     <configuration name="Timer" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -321,6 +351,19 @@
       <test-file value="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" />
       <test-names>
         <test-name value="Timer" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="TimerCreator" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
+      <test-names>
+        <test-name value="TimerCreator" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -403,9 +446,11 @@
       <item itemvalue="Jest.Timer.render.renders TimerDeleteButton" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.test" />
+      <item itemvalue="Jest.TimerCreator" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.TimerCreator" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.Timer.render.renders TimerDeleteButton" />
         <item itemvalue="Jest.Timer.behaviour.deleting timer.calls delete prop on TimerDeleteButton click" />
@@ -432,7 +477,7 @@
       <workItem from="1542385364396" duration="40000" />
       <workItem from="1542386543698" duration="3187000" />
       <workItem from="1542389982185" duration="8837000" />
-      <workItem from="1542447853234" duration="4023000" />
+      <workItem from="1542447853234" duration="5610000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -546,52 +591,82 @@
       <option name="project" value="LOCAL" />
       <updated>1542452997311</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="TimerDeleteButton behaviour test">
+      <created>1542453346884</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542453346884</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.11.17 at 11h 07m 36s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 33m 44s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 08m 06s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 35m 03s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 08m 28s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 36m 08s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 08m 35s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 38m 09s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 09m 03s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 38m 19s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 09m 14s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 39m 02s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 09m 40s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 39m 50s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 13m 24s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 40m 04s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 13m 44s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 40m 34s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 11h 14m 44s.xml">
+    <history-entry file="All_Tests - 2018.11.17 at 11h 40m 50s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64204000" />
+    <option name="totallyTimeSpent" value="65791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7028494" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7028494" visible="true" weight="0.2747253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.2971506" side_tool="true" weight="0.25274727" />
-      <window_info id="Favorites" order="3" sideWeight="0.2971506" side_tool="true" visible="true" weight="0.25274727" />
+      <window_info id="npm" order="2" sideWeight="0.2971506" side_tool="true" weight="0.25579977" />
+      <window_info id="Favorites" order="3" sideWeight="0.2971506" side_tool="true" weight="0.25274727" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49909583" visible="true" weight="0.35580912" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50090414" side_tool="true" weight="0.31224066" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32572615" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32987553" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32987553" />
+      <window_info active="true" anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.26617828" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7028494" visible="true" weight="0.25579977" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.2971506" side_tool="true" visible="true" weight="0.25579977" />
+      <window_info id="Favorites" order="3" sideWeight="0.2971506" side_tool="true" weight="0.25274727" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49909583" visible="true" weight="0.23547718" />
@@ -605,30 +680,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32572615" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32987553" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32987553" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.34432235" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7028494" visible="true" weight="0.25274727" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.2971506" side_tool="true" weight="0.25274727" />
-      <window_info id="Favorites" order="3" sideWeight="0.2971506" side_tool="true" visible="true" weight="0.25274727" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49909583" visible="true" weight="0.23547718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50090414" side_tool="true" weight="0.31224066" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32572615" />
-      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32987553" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32987553" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.2820513" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.34859586" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -696,7 +748,8 @@
     <MESSAGE value="More tests and tings" />
     <MESSAGE value="TimerDeleteButton render tests" />
     <MESSAGE value="Refactor Timer test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Timer test" />
+    <MESSAGE value="TimerDeleteButton behaviour test" />
+    <option name="LAST_COMMIT_MESSAGE" value="TimerDeleteButton behaviour test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -731,23 +784,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SuperTimer/index.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/eslint/lib/util/timing.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -872,16 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/TimeField.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Shell/__snapshots__/Shell.test.jsx.snap">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -899,25 +925,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -966,16 +975,6 @@
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1055,16 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Shell/Shell.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1078,20 +1067,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="826">
-          <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="345">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>
@@ -1100,8 +1079,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="234">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimeField/container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimeField/TimeField.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimeField/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1201">
+          <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Shell/Shell.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="3" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

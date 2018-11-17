@@ -48,9 +48,7 @@ class TimerCreator extends Component {
         <CustomTimeField value={duration} onChange={this.handleTimeChange} />
         <Button
           type="submit"
-          onClick={() => {
-            this.handleClick()
-          }}
+          onClick={() => { this.handleClick() }}
         >
 Create timer
         </Button>

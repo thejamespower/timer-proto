@@ -1,3 +1,3 @@
-import TimeField from './container'
+import TimeField from './TimeField'
 
 export default TimeField
