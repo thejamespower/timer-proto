@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import moment from 'moment'
 import Button from '@material-ui/core/Button'
 
 import CustomTimeField from '../TimeField'
+
+const uuid = require('uuid/v4')
 
 const zeroDuration = '00:00:00'
 
@@ -35,7 +36,7 @@ class TimerCreator extends Component {
 
     createTimer({
       duration,
-      id: `${moment().format()}-${Math.random()}`,
+      id: uuid(),
       name,
     })
   }
