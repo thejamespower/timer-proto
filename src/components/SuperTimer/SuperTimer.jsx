@@ -63,7 +63,7 @@ class SuperTimer extends Component {
           </Typography>
           {active && !complete && (
           <Countdown
-            date={moment().add(moment.duration(duration))}
+            date={moment().add(moment.duration(duration)).toDate()}
             dayInHours
             onTick={this.handleTick}
             onComplete={this.handleComplete}
