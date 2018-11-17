@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TimerDeleteButton renders 1`] = `
+exports[`TimerDeleteButton render renders active state 1`] = `null`;
+
+exports[`TimerDeleteButton render renders complete state 1`] = `null`;
+
+exports[`TimerDeleteButton render renders default state 1`] = `
 <div>
   <div
     className="MuiCardActions-root-1"
@@ -49,3 +53,5 @@ exports[`TimerDeleteButton renders 1`] = `
   </div>
 </div>
 `;
+
+exports[`TimerDeleteButton render renders superTimerActive state 1`] = `null`;

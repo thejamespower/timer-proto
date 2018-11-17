@@ -4,23 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="Basic snaps">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/container.js" afterDir="false" />
+    <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/jest.overrides.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/jest/overrides.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Shell/__snapshots__/Shell.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/__snapshots__/Shell.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timer/__snapshots__/Timer.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/__snapshots__/Timer.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timer/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerList/__snapshots__/TimerList.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/__snapshots__/TimerList.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,25 +21,61 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cooking_timer$All_Tests.info" NAME="All Tests Coverage Results" MODIFIED="1542452530549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cooking_timer$All_Tests.info" NAME="All Tests Coverage Results" MODIFIED="1542452810021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cooking_timer$Timer_test_jsx.info" NAME="Timer.test.jsx Coverage Results" MODIFIED="1542443572256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cooking_timer$TimerList.info" NAME="TimerList Coverage Results" MODIFIED="1542442757390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cooking_timer$Timer.info" NAME="Timer Coverage Results" MODIFIED="1542443941413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
     <option name="myAutoScrollToSource" value="true" />
-    <option name="myElementSize" value="403" />
+    <option name="myElementSize" value="416" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="cooking-timer" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="105" column="48" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
+            <state relative-caret-position="-257">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -193,9 +216,9 @@
         <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/container.js" />
         <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" />
         <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/Timer/Timer.jsx" />
         <option value="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" />
+        <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" />
       </list>
     </option>
   </component>
@@ -257,7 +280,7 @@
               <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Timer" type="462c0819:PsiDirectoryNode" />
+              <item name="TimerDeleteButton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
@@ -265,6 +288,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="TimerDeleteButton" type="462c0819:PsiDirectoryNode" />
+              <item name="__snapshots__" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
@@ -293,7 +317,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -446,7 +470,7 @@
       <workItem from="1542385364396" duration="40000" />
       <workItem from="1542386543698" duration="3187000" />
       <workItem from="1542389982185" duration="8837000" />
-      <workItem from="1542447853234" duration="3250000" />
+      <workItem from="1542447853234" duration="3530000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -539,25 +563,17 @@
       <option name="project" value="LOCAL" />
       <updated>1542440797121</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="More tests and tings">
+      <created>1542452551083</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1542452551084</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.11.17 at 10h 56m 29s.xml">
-      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 10h 56m 47s.xml">
-      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 10h 57m 35s.xml">
-      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 10h 58m 21s.xml">
-      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="All_Tests - 2018.11.17 at 10h 58m 53s.xml">
-      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="All_Tests - 2018.11.17 at 10h 59m 09s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
@@ -573,21 +589,36 @@
     <history-entry file="All_Tests - 2018.11.17 at 11h 01m 56s.xml">
       <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="All_Tests - 2018.11.17 at 11h 02m 10s.xml">
+      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="All_Tests - 2018.11.17 at 11h 04m 43s.xml">
+      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="All_Tests - 2018.11.17 at 11h 04m 55s.xml">
+      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="All_Tests - 2018.11.17 at 11h 05m 55s.xml">
+      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="All_Tests - 2018.11.17 at 11h 06m 15s.xml">
+      <configuration name="All Tests" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63431000" />
+    <option name="totallyTimeSpent" value="63711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7028494" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7028494" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.2971506" side_tool="true" weight="0.25274727" />
       <window_info id="Favorites" order="3" sideWeight="0.2971506" side_tool="true" visible="true" weight="0.25274727" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49909583" visible="true" weight="0.23547718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49909583" visible="true" weight="0.23547718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -598,7 +629,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32572615" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32987553" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32987553" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.31379732" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.32478634" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -686,16 +717,10 @@
     <MESSAGE value="Fix bug in deleting a single timer, refactor TimerDeleteButton, shell test" />
     <MESSAGE value="Basic snapshots for default props" />
     <MESSAGE value="Basic snaps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic snaps" />
+    <MESSAGE value="More tests and tings" />
+    <option name="LAST_COMMIT_MESSAGE" value="More tests and tings" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/AddItem/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1035,32 +1060,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/action-creators.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1082,20 +1087,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="32" />
+        <state relative-caret-position="258">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="105" column="48" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
+        <state relative-caret-position="302">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
