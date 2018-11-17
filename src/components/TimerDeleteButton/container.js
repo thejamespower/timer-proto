@@ -1,18 +1,16 @@
 import { connect } from 'react-redux'
 
 import { bindActionCreators } from 'redux'
-import Timer from './Timer'
-import { completeTimer } from '../../action-creators'
+import TimerDeleteButton from './TimerDeleteButton'
+import { deleteTimer } from '../../action-creators'
 
-const mapStateToProps = state => ({
-  superTimerActive: state.timers.superTimer.active,
-})
+const mapStateToProps = null
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  completeTimer,
+  deleteTimer,
 }, dispatch)
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Timer)
+)(TimerDeleteButton)

@@ -5,7 +5,7 @@ import moment from 'moment'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
-import TimerDeleteButton from '../TimerDeleteButton/TimerDeleteButton'
+import TimerDeleteButton from '../TimerDeleteButton'
 
 class Timer extends Component {
   static propTypes = {
@@ -18,7 +18,6 @@ class Timer extends Component {
       timeToStartInSeconds: PropTypes.number.isRequired,
       complete: PropTypes.bool.isRequired,
     }).isRequired,
-    deleteTimer: PropTypes.func.isRequired,
     completeTimer: PropTypes.func.isRequired,
     superTimerActive: PropTypes.bool.isRequired,
   }
@@ -52,7 +51,6 @@ class Timer extends Component {
         name, active, timeToStart, id, complete,
       },
       superTimerActive,
-      deleteTimer,
     } = this.props
 
     const { duration } = this.state
@@ -62,12 +60,16 @@ class Timer extends Component {
         <CardContent>
           <Typography color="textSecondary" gutterBottom>Timer</Typography>
           <Typography>{name}</Typography>
-          {active && <Countdown date={moment().add(moment.duration(duration))} onComplete={this.handleComplete} />}
+          {active && (
+            <Countdown
+              date={moment().add(moment.duration(duration)).toDate()}
+              onComplete={this.handleComplete}
+            />
+          )}
           {!active && !complete && <p>{duration}, Time to start: {timeToStart}</p>}
           {complete && <p>Done!</p>}
         </CardContent>
         <TimerDeleteButton
-          onClick={() => deleteTimer(id)}
           superTimerActive={superTimerActive}
           active={active}
           id={id}

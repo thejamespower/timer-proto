@@ -7,7 +7,8 @@ describe('TimerDeleteButton', () => {
     active: false,
     complete: false,
     superTimerActive: false,
-    onClick: () => null,
+    deleteTimer: () => null,
+    id: 'test',
   }
 
   it('renders', () => {
