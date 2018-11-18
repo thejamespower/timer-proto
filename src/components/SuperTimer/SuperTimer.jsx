@@ -71,16 +71,18 @@ class SuperTimer extends Component {
           />)}
           {complete && <p>All done!</p>}
         </CardContent>
+        {(!active || !complete) && (
         <CardActions>
           <Button
             disabled={duration === '00:00:00'}
             type="submit"
             variant="contained"
             color="primary"
-            onClick={this.handleSubmitClick}
+            onClick={() => { this.handleSubmitClick() }}
           >Start
           </Button>
         </CardActions>
+        )}
       </Card>
     )
   }
