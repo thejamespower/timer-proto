@@ -5,6 +5,14 @@
 /.pnp
 .pnp.js
 
+# Apache Cordova generated files and directories
+/cordova/plugins/*
+/cordova/platforms/*
+/cordova/platforms/*
+/cordova/node_modules/*
+/cordova/www/*
+/cordova/res/*
+
 # testing
 /coverage
 
