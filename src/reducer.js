@@ -80,7 +80,7 @@ const timersReducers = handleActions(
     },
 
     [TIMER_DELETE]: (state, { payload }) => {
-      if (payload.length || state.getIn(['superTimer', 'active'])) {
+      if (!payload.length || state.getIn(['superTimer', 'active'])) {
         return state;
       }
 

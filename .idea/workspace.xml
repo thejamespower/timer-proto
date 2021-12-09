@@ -9,9 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +289,7 @@
       <workItem from="1567510156243" duration="47000" />
       <workItem from="1638981727312" duration="2086000" />
       <workItem from="1638984318954" duration="5917000" />
-      <workItem from="1639043935492" duration="2287000" />
+      <workItem from="1639043935492" duration="2658000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -503,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639046135633</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update dependency">
+      <created>1639046249598</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1639046249598</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -574,7 +579,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/core-web-engine" />
     </ignored-roots>
-    <MESSAGE value="SuperTimer" />
     <MESSAGE value="New timer component, fix timetostart" />
     <MESSAGE value="Delete a timer" />
     <MESSAGE value="Make a bit prettier" />
@@ -599,7 +603,8 @@
     <MESSAGE value="Rename lib functions" />
     <MESSAGE value="Update tests" />
     <MESSAGE value="Update reducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update reducer" />
+    <MESSAGE value="Update dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update dependency" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
