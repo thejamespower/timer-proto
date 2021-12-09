@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Countdown from 'react-countdown-now'
-import moment from 'moment'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import TimerDeleteButton from '../TimerDeleteButton'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Countdown from 'react-countdown-now';
+import moment from 'moment';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import TimerDeleteButton from '../TimerDeleteButton';
 
 class Timer extends Component {
   static propTypes = {
@@ -20,53 +20,68 @@ class Timer extends Component {
     }).isRequired,
     completeTimer: PropTypes.func.isRequired,
     superTimerActive: PropTypes.bool.isRequired,
-  }
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
 
-    const { timer: { duration } } = this.props
+    const {
+      timer: { duration },
+    } = this.props;
 
     this.state = {
       duration,
-    }
+    };
 
-    this.handleComplete = this.handleComplete.bind(this)
+    this.handleComplete = this.handleComplete.bind(this);
   }
 
   shouldComponentUpdate(nextProps) {
-    const { timer: { timeToStart: oldTimeToStart, active: oldActive } } = this.props
-    const { timer: { timeToStart: newTimeToStart, active: newActive } } = nextProps
-    return newActive !== oldActive || newTimeToStart !== oldTimeToStart
+    const {
+      timer: { timeToStart: oldTimeToStart, active: oldActive },
+    } = this.props;
+    const {
+      timer: { timeToStart: newTimeToStart, active: newActive },
+    } = nextProps;
+    return newActive !== oldActive || newTimeToStart !== oldTimeToStart;
   }
 
   handleComplete() {
-    const { completeTimer, timer: { id } } = this.props
-    completeTimer(id)
+    const {
+      completeTimer,
+      timer: { id },
+    } = this.props;
+    completeTimer(id);
   }
 
   render() {
     const {
-      timer: {
-        name, active, timeToStart, id, complete,
-      },
+      timer: { name, active, timeToStart, id, complete },
       superTimerActive,
-    } = this.props
+    } = this.props;
 
-    const { duration } = this.state
+    const { duration } = this.state;
 
     return (
       <Card>
         <CardContent>
-          <Typography color="textSecondary" gutterBottom>Timer</Typography>
+          <Typography color="textSecondary" gutterBottom>
+            Timer
+          </Typography>
           <Typography>{name}</Typography>
           {active && (
             <Countdown
-              date={moment().add(moment.duration(duration)).toDate()}
+              date={moment()
+                .add(moment.duration(duration))
+                .toDate()}
               onComplete={this.handleComplete}
             />
           )}
-          {!active && !complete && <p>{duration}, Time to start: {timeToStart}</p>}
+          {!active && !complete && (
+            <p>
+              {duration}, Time to start: {timeToStart}
+            </p>
+          )}
           {complete && <p>Done!</p>}
         </CardContent>
         <TimerDeleteButton
@@ -76,8 +91,8 @@ class Timer extends Component {
           complete={complete}
         />
       </Card>
-    )
+    );
   }
 }
 
-export default Timer
+export default Timer;

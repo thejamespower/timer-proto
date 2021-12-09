@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Countdown from 'react-countdown-now'
-import moment from 'moment'
-import Button from '@material-ui/core/Button/Button'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Countdown from 'react-countdown-now';
+import moment from 'moment';
+import Button from '@material-ui/core/Button/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
 class SuperTimer extends Component {
   static propTypes = {
@@ -20,42 +20,48 @@ class SuperTimer extends Component {
     startSuperTimer: PropTypes.func.isRequired,
     tickSuperTimer: PropTypes.func.isRequired,
     completeSuperTimer: PropTypes.func.isRequired,
-  }
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.handleSubmitClick = this.handleSubmitClick.bind(this)
-    this.handleTick = this.handleTick.bind(this)
-    this.handleComplete = this.handleComplete.bind(this)
+    this.handleSubmitClick = this.handleSubmitClick.bind(this);
+    this.handleTick = this.handleTick.bind(this);
+    this.handleComplete = this.handleComplete.bind(this);
   }
 
   shouldComponentUpdate(nextProps) {
-    const { superTimer: { duration, active } } = this.props
-    return nextProps.superTimer.duration !== duration || nextProps.superTimer.active !== active
+    const {
+      superTimer: { duration, active },
+    } = this.props;
+    return (
+      nextProps.superTimer.duration !== duration ||
+      nextProps.superTimer.active !== active
+    );
   }
 
   handleSubmitClick() {
-    const { startSuperTimer, superTimer: { duration } } = this.props
-    if (duration === '00:00:00') return
-    startSuperTimer()
+    const {
+      startSuperTimer,
+      superTimer: { duration },
+    } = this.props;
+    if (duration === '00:00:00') return;
+    startSuperTimer();
   }
 
   handleTick({ total }) {
-    const { tickSuperTimer } = this.props
-    tickSuperTimer(total / 1000)
+    const { tickSuperTimer } = this.props;
+    tickSuperTimer(total / 1000);
   }
 
   handleComplete() {
-    const { completeSuperTimer } = this.props
-    completeSuperTimer()
+    const { completeSuperTimer } = this.props;
+    completeSuperTimer();
   }
 
   render() {
-    const { superTimer } = this.props
-    const {
-      duration, active, complete,
-    } = superTimer
+    const { superTimer } = this.props;
+    const { duration, active, complete } = superTimer;
     return (
       <Card>
         <CardContent>
@@ -63,29 +69,35 @@ class SuperTimer extends Component {
             Total: {duration}
           </Typography>
           {active && (
-          <Countdown
-            date={moment().add(moment.duration(duration)).toDate()}
-            dayInHours
-            onTick={this.handleTick}
-            onComplete={this.handleComplete}
-          />)}
+            <Countdown
+              date={moment()
+                .add(moment.duration(duration))
+                .toDate()}
+              dayInHours
+              onTick={this.handleTick}
+              onComplete={this.handleComplete}
+            />
+          )}
           {complete && <p>All done!</p>}
         </CardContent>
         {(!active || !complete) && (
-        <CardActions>
-          <Button
-            disabled={duration === '00:00:00'}
-            type="submit"
-            variant="contained"
-            color="primary"
-            onClick={() => { this.handleSubmitClick() }}
-          >Start
-          </Button>
-        </CardActions>
+          <CardActions>
+            <Button
+              disabled={duration === '00:00:00'}
+              type="submit"
+              variant="contained"
+              color="primary"
+              onClick={() => {
+                this.handleSubmitClick();
+              }}
+            >
+              Start
+            </Button>
+          </CardActions>
         )}
       </Card>
-    )
+    );
   }
 }
 
-export default SuperTimer
+export default SuperTimer;

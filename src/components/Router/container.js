@@ -1,12 +1,9 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import Router from './Router'
+import Router from './Router';
 
-const mapStateToProps = null
+const mapStateToProps = null;
 
-const mapDispatchToProps = null
+const mapDispatchToProps = null;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Router)
+export default connect(mapStateToProps, mapDispatchToProps)(Router);

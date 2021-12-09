@@ -3,52 +3,137 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="SuperTimer tests">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/platforms/android/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100.987b8457.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100.e9dbbe8a.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100italic.6232f43d.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100italic.d704bb3d.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300.55536c8e.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300.a1471d1d.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300italic.210a7c78.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300italic.d69924b9.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400.5d4aeb4e.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400.bafb105b.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400italic.9680d5a0.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400italic.d8bcbe72.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500.28546717.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500.de8b7431.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500italic.510dec37.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500italic.ffcc050b.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700.037d8304.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700.cf6613d1.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700italic.010c1aee.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700italic.846d1890.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900.19b7a0ad.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900.8c2ade50.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900italic.7b770d6c.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900italic.bc833e72.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cooking-timer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cooking-timer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03ea0c02b2eda70f9feec14ba002ef7f969b7165" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e41d08a0e006ea7a34259ad80e9da89722931f3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43e818e74204f1b56a0dfe71dd715f1a3f658521" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f469c61727222226b25ba82c45d76d1104a348a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55cb70b82879be8930f183821a40b797fb5240d7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71411d52ca9df7850318ad46b0c8ec82af20f31f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/7551c3af2c5c9c5d3509090c14f14ee49b73591c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a39bc8b14b00c579483b926fbe243e7d7acf286" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/803a01c593b21a1ddcd457e52bebd714950f99f4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81bc9e6b40914f4c6bc0c68d1f6c10efeaf12b9f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/920ab6ab4a57ee20a36df4e3e2e73b70f9969d14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a288bcd72683293e66f7752dc726e9683204c0c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8ed5138c4a0e076fb7a0ea5dc9846fdd81dd1a4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d16b1fdd1fb3aa566e9fc0594e3bc0f3a8791cf6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/dbc0c31823b8f2e4ed04a397722fed33a67f123f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1a61ce75f1c49c2e6f5507b3c89d3940dc8b593" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f43ecdf8d666ee908aacce037b4cd72159e4741b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/convertDurationToSeconds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/convertDurationToSeconds.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/convertSecondsToDuration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/convertSecondsToDuration.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/timersComplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/timersComplete.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/timersNewStart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/timersNewStart.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/timersStart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/timersStart.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/precache-manifest.cc49f5c06b64aae940c4b267722a6bb4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/static/css/1.44546b99.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/static/css/1.44546b99.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/static/js/1.26ce275a.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/static/js/1.26ce275a.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/hooks/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/platforms/android/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100.987b8457.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100.e9dbbe8a.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100italic.6232f43d.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-100italic.d704bb3d.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300.55536c8e.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300.a1471d1d.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300italic.210a7c78.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-300italic.d69924b9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400.5d4aeb4e.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400.bafb105b.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400italic.9680d5a0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-400italic.d8bcbe72.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500.28546717.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500.de8b7431.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500italic.510dec37.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-500italic.ffcc050b.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700.037d8304.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700.cf6613d1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700italic.010c1aee.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-700italic.846d1890.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900.19b7a0ad.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900.8c2ade50.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900italic.7b770d6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cordova/www/static/media/roboto-latin-900italic.bc833e72.woff" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimeField/__snapshots__/TimeField.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/__snapshots__/TimeField.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action-creators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-creators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router/Router.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shell/Shell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/Shell.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shell/Shell.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/Shell.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shell/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shell/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimeField/TimeField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/TimeField.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimeField/TimeField.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/TimeField.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimeField/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerList/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AddItem/AddItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AddItem/AddItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AddItem/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AddItem/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AddItem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AddItem/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,9 +156,6 @@
   <component name="FavoritesManager">
     <favorites_list name="cooking-timer" />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -81,135 +163,16 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>fallse</find>
-      <find>PropTypes.func.isRequired</find>
-      <find>Timer</find>
-      <find>TimerDeleteButton</find>
-      <find>over</find>
-      <find>it('default',</find>
-      <find>it('active',</find>
-      <find>react</find>
-      <find>enzyme</find>
-      <find>delete</find>
-      <find>shallow</find>
-      <find>active</find>
-      <find>duration stat</find>
-      <find>default st</find>
-      <find>babel</find>
-      <find>resolve</find>
-      <find>resolve:</find>
-      <find>alias:</find>
-      <find>preset</find>
-      <find>jest</find>
-      <find>Change this text</find>
-      <find>android</find>
-      <find>version</find>
-      <find>com</find>
-      <find>chunk</find>
-      <find>script</find>
-      <find>BrowserRouter</find>
-      <find>homepage</find>
-      <find>build</find>
-      <find>www</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>cmd</replace>
-      <replace>TIMER_CREATE</replace>
-      <replace>TIMER_DELETE</replace>
-      <replace>TIMER_COMPLETE</replace>
-      <replace>SUPER_TIMER_START</replace>
-      <replace>SUPER_TIMER_TICK</replace>
-      <replace>createTimer</replace>
-      <replace>deleteTimer</replace>
-      <replace>completeTimer</replace>
-      <replace>startSuperTimer</replace>
-      <replace>tickSuperTimer</replace>
-      <replace>timersNewStart</replace>
-      <replace>timersStart</replace>
-      <replace>handleComplete</replace>
-      <replace>import { PropTypes } from 'prop-types'</replace>
-      <replace>import PropTypes from 'prop-types'</replace>
-      <replace>SuperTimer</replace>
-      <replace>TimeField</replace>
-      <replace>Timer</replace>
-      <replace>''</replace>
-      <replace>fallse</replace>
-      <replace>0</replace>
-      <replace>false</replace>
-      <replace>() =&gt; null</replace>
-      <replace>TimerCreator</replace>
-      <replace>TimerDeleteButton</replace>
-      <replace>it('renders default state',</replace>
-      <replace>it('renders active state',</replace>
-      <replace>TimerList</replace>
-      <replace>mount</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/TimerCreator</dir>
-      <dir>$PROJECT_DIR$/src/components/DeleteTimer</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/components/App/App.scss" />
-        <option value="$PROJECT_DIR$/src/components/Router/index.js" />
-        <option value="$PROJECT_DIR$/src/components/App/App.jsx" />
-        <option value="$PROJECT_DIR$/src/views/Home/index.js" />
-        <option value="$PROJECT_DIR$/src/views/AddItem/container.js" />
-        <option value="$PROJECT_DIR$/src/views/AddItem/AddItem.jsx" />
-        <option value="$PROJECT_DIR$/src/views/Home/Home.jsx" />
-        <option value="$PROJECT_DIR$/src/views/Home/container.js" />
-        <option value="$PROJECT_DIR$/src/components/TimerList/TimerList.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimeField/container.js" />
-        <option value="$PROJECT_DIR$/src/components/TimeField/TimeField.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerList/container.js" />
-        <option value="$PROJECT_DIR$/src/components/TimerCreator/container.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/keymaps/Default copy1.xml" />
-        <option value="$PROJECT_DIR$/src/action-types.js" />
-        <option value="$PROJECT_DIR$/src/components/SuperTimer/container.js" />
-        <option value="$PROJECT_DIR$/src/components/Shell/Shell.test.js" />
-        <option value="$PROJECT_DIR$/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/scripts/test.js" />
-        <option value="$PROJECT_DIR$/src/reducer.js" />
-        <option value="$PROJECT_DIR$/src/components/TimerDelete.jsx" />
-        <option value="$PROJECT_DIR$/src/components/DeleteTimer.jsx" />
-        <option value="$PROJECT_DIR$/src/components/DeleteTimer/index.js" />
-        <option value="$PROJECT_DIR$/src/components/DeleteTimer/DeleteTimer.jsx" />
-        <option value="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.js" />
-        <option value="$PROJECT_DIR$/scripts/jest.overrides.js" />
-        <option value="$PROJECT_DIR$/src/components/TimeField/TimeField.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx" />
-        <option value="$PROJECT_DIR$/config/jest/overrides.js" />
-        <option value="$PROJECT_DIR$/src/action-creators.js" />
-        <option value="$PROJECT_DIR$/src/components/Timer/container.js" />
-        <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/container.js" />
-        <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" />
-        <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Timer/Timer.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Timer/Timer.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimeField/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Shell/Shell.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.jsx" />
-        <option value="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" />
-        <option value="$PROJECT_DIR$/cooking-timer-mobile/screens/HomeScreen.js" />
-        <option value="$PROJECT_DIR$/src/serviceWorker.js" />
-        <option value="$PROJECT_DIR$/src/index.jsx" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/Router/Router.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Router/container.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-      </list>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -218,88 +181,65 @@
       </set>
     </option>
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
-  </component>
+  <component name="ProjectId" id="1PN3WTOGS52t3toUJ6J9Bz5Su49" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cooking-timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cooking-timer" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MANAGE_IGNORE_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib" />
       <recent name="$PROJECT_DIR$/cordova/www" />
       <recent name="$PROJECT_DIR$/src/components/TimerDeleteButton" />
       <recent name="$PROJECT_DIR$/src/components/TimerList" />
       <recent name="$PROJECT_DIR$/src/components/TimerCreator" />
-      <recent name="$PROJECT_DIR$/src/components/Timer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/core-web-engine" />
       <recent name="$PROJECT_DIR$/config/jest" />
       <recent name="$PROJECT_DIR$/src/components/DeleteTimer" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/Shell" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/lib/timersComplete.js" />
+      <recent name="$PROJECT_DIR$/src/lib/timersStart.js" />
+      <recent name="$PROJECT_DIR$/src/lib/timersNewStart.js" />
+      <recent name="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.js" />
+      <recent name="$PROJECT_DIR$/src/lib/convertSecondsToDuration.js" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Jest.TimeField">
+  <component name="RunManager" selected="Jest.timersComplete.test.js">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -308,19 +248,6 @@
       <jest-options value="--watch --coverage --updateSnapshot" />
       <envs />
       <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TimeField" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/components/TimeField/TimeField.test.jsx" />
-      <test-names>
-        <test-name value="TimeField" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Timer" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
@@ -336,26 +263,70 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="TimerCreator" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="JavaScriptTestRunnerJest">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="convertDurationToSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/lib/convertDurationToSeconds.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="convertSecondsToDuration.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/lib/convertSecondsToDuration.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="getTotalDurationInSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="timersComplete.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/lib/timersComplete.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="timersNewStart.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
-      <test-names>
-        <test-name value="TimerCreator" />
-      </test-names>
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/lib/timersNewStart.test.js" />
       <method v="2" />
     </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cooking-timer/build/index.html">
-      <method v="2" />
-    </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cooking-timer/cordova/www/index.html">
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -365,40 +336,32 @@
         <script value="start" />
       </scripts>
       <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
-      <item itemvalue="JavaScript Debug.index.html (1)" />
-      <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Timer" />
-      <item itemvalue="Jest.TimerCreator" />
-      <item itemvalue="Jest.TimeField" />
+      <item itemvalue="Jest.timersNewStart.test.js" />
+      <item itemvalue="Jest.getTotalDurationInSeconds.test.js" />
+      <item itemvalue="Jest.convertDurationToSeconds.test.js" />
+      <item itemvalue="Jest.convertSecondsToDuration.test.js" />
+      <item itemvalue="Jest.timersComplete.test.js" />
       <item itemvalue="npm.npm start" />
-      <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.TimeField" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Jest.TimerCreator" />
+        <item itemvalue="Jest.timersComplete.test.js" />
+        <item itemvalue="Jest.convertSecondsToDuration.test.js" />
+        <item itemvalue="Jest.convertDurationToSeconds.test.js" />
+        <item itemvalue="Jest.getTotalDurationInSeconds.test.js" />
+        <item itemvalue="Jest.timersNewStart.test.js" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -439,6 +402,14 @@
       <workItem from="1559901538007" duration="2112000" />
       <workItem from="1561290108352" duration="117000" />
       <workItem from="1561457293907" duration="90000" />
+      <workItem from="1565700760080" duration="5427000" />
+      <workItem from="1565970664861" duration="112000" />
+      <workItem from="1566205262944" duration="161000" />
+      <workItem from="1566207970272" duration="371000" />
+      <workItem from="1567411935779" duration="3000" />
+      <workItem from="1567510156243" duration="47000" />
+      <workItem from="1638981727312" duration="2086000" />
+      <workItem from="1638984318954" duration="5917000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -650,71 +621,15 @@
       <configuration name="Update snapshot for TimeField.renders" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89413000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6956078" visible="true" weight="0.31946957" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.30439225" side_tool="true" visible="true" weight="0.31946957" />
-      <window_info id="Favorites" order="3" sideWeight="0.29799426" side_tool="true" weight="0.2747253" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49909583" weight="0.3655006" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937758" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021097" side_tool="true" weight="0.27904564" />
-      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32987553" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32987553" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4978903" weight="0.25229827" />
-      <window_info anchor="bottom" id="Services" order="13" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.2875458" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7004539" visible="true" weight="0.27365884" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.29954615" side_tool="true" visible="true" weight="0.27365884" />
-      <window_info id="Favorites" order="3" sideWeight="0.29799426" side_tool="true" weight="0.2747253" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49909583" visible="true" weight="0.32482123" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937758" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021097" side_tool="true" weight="0.27904564" />
-      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32987553" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32987553" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4978903" weight="0.25229827" />
-      <window_info anchor="bottom" id="Services" order="13" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.2875458" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -733,10 +648,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/core-web-engine" />
     </ignored-roots>
@@ -767,234 +684,13 @@
     <MESSAGE value="SuperTimer tests" />
     <option name="LAST_COMMIT_MESSAGE" value="SuperTimer tests" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/container.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Timer/__snapshots__/Timer.test.jsx.snap" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerList/TimerList.test.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/container.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.test.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerDeleteButton/TimerDeleteButton.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/Shell/__snapshots__/Shell.test.jsx.snap" />
-    <entry file="file://$PROJECT_DIR$/src/components/Shell/Shell.test.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/SuperTimer/__snapshots__/SuperTimer.test.jsx.snap" />
-    <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js" />
-    <entry file="file://$PROJECT_DIR$/config/jest/overrides.js" />
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js" />
-    <entry file="file://$PROJECT_DIR$/cooking-timer-web-prototype/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/cooking-timer-mobile/screens/HomeScreen.js" />
-    <entry file="file://$PROJECT_DIR$/cordova/platforms/android/android.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordova/platforms/android/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordova/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-247">
-            <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordova/www/static/js/1.5afde835.chunk.js" />
-    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.scss" />
-    <entry file="file://$PROJECT_DIR$/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2497" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordova/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="143" column="38" lean-forward="true" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/AddItem/AddItem.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action-creators.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action-types.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="118" column="56" lean-forward="true" selection-start-line="118" selection-start-column="56" selection-end-line="118" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Shell/Shell.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Home/Home.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Router/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Router/Router.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Router/container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="153" column="46" lean-forward="true" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="467" column="8" selection-start-line="467" selection-start-column="8" selection-end-line="467" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="142" column="55" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/TimeField.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeField/TimeField.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="timer-proto" type="b2602c69:ProjectViewProjectNode" />
+        <item name="timer-proto" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>

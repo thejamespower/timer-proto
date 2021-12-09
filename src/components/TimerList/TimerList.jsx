@@ -1,17 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Timer from '../Timer'
-import SuperTimer from '../SuperTimer'
+import Timer from '../Timer';
+import SuperTimer from '../SuperTimer';
 
 function TimerList(props) {
-  const { timers } = props
+  const { timers } = props;
   return (
     <div>
-      {timers.map(timer => <Timer key={timer.id} timer={timer} />)}
+      {timers.map(timer => (
+        <Timer key={timer.id} timer={timer} />
+      ))}
       <SuperTimer />
     </div>
-  )
+  );
 }
 
 TimerList.propTypes = {
@@ -22,6 +24,6 @@ TimerList.propTypes = {
       active: PropTypes.bool.isRequired,
     }),
   ).isRequired,
-}
+};
 
-export default TimerList
+export default TimerList;

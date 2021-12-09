@@ -1,3 +1,3 @@
-import TimerCreator from './container'
+import TimerCreator from './container';
 
-export default TimerCreator
+export default TimerCreator;

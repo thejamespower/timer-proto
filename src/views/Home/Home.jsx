@@ -1,28 +1,28 @@
-import React from 'react'
-import { TextField } from '@material-ui/core'
-import TimerCreator from '../../components/TimerCreator'
-import TimerList from '../../components/TimerList'
+import React from 'react';
+import { TextField } from '@material-ui/core';
+import TimerCreator from '../../components/TimerCreator';
+import TimerList from '../../components/TimerList';
 
 export default class Home extends React.Component {
   constructor(props) {
-    super(props)
-    this.handleChange = this.handleChange.bind(this)
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
 
     this.state = {
       name: '',
-    }
+    };
   }
 
   handleChange(name) {
-    return (event) => {
+    return event => {
       this.setState({
         [name]: event.target.value,
-      })
-    }
+      });
+    };
   }
 
   render() {
-    const { name } = this.state
+    const { name } = this.state;
     return (
       <div>
         <TextField
@@ -35,6 +35,6 @@ export default class Home extends React.Component {
         <TimerCreator name={name} />
         <TimerList />
       </div>
-    )
+    );
   }
 }

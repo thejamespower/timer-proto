@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Router from '../Router'
+import Router from '../Router';
 
-const App = () => <Router />
+const App = () => <Router />;
 
-App.propTypes = {
-}
+App.propTypes = {};
 
-export default App
+export default App;

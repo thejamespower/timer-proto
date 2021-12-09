@@ -1,8 +1,8 @@
-import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import Home from '../../views/Home'
-import AddItem from '../../views/AddItem'
+import Home from '../../views/Home';
+import AddItem from '../../views/AddItem';
 
 const Router = () => (
   <BrowserRouter>
@@ -10,9 +10,9 @@ const Router = () => (
       <Route path="/" exact component={Home} />
       <Route path="/add-item" exact component={AddItem} />
     </div>
-  </BrowserRouter>)
+  </BrowserRouter>
+);
 
-Router.propTypes = {
-}
+Router.propTypes = {};
 
-export default Router
+export default Router;

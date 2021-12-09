@@ -1,17 +1,48 @@
 module.exports = {
-  'extends': 'airbnb',
-  'rules': {
-    'semi': ['warn', 'never'],
-    'quotes': ['error', 'single'],
-    'max-len': ['error', {
-      'code': 120,
-      'ignoreTrailingComments': true,
-    }],
-    'react/jsx-one-expression-per-line': 'off',
+  parser: 'babel-eslint',
+  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/react'],
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    jest: true,
+    node: true,
   },
-  'parser': 'babel-eslint',
-  'env': {
-    'browser': true,
-    'jest': true,
+  rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.*', '**/*.spec.*', 'jest/*.*'] },
+    ],
+    'jsx-a11y/href-no-hash': ['off'],
+    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx'] }],
+    'max-len': [
+      'warn',
+      {
+        code: 80,
+        tabWidth: 2,
+        comments: 80,
+        ignoreComments: false,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
+  },
+  overrides: [
+    {
+      files: ['*.scss.d.ts'],
+      rules: {
+        'import/prefer-default-export': 'off',
+      },
+    },
+  ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+      },
+    },
   },
 };

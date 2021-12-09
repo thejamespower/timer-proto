@@ -1,3 +1,3 @@
-import TimeField from './TimeField'
+import TimeField from './TimeField';
 
-export default TimeField
+export default TimeField;
