@@ -8,13 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reducer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/Timer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -63,7 +63,7 @@ class Timer extends Component {
     const { duration } = this.state;
 
     return (
-      <Card>
+      <Card style={{ marginBottom: '1rem' }}>
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             Timer

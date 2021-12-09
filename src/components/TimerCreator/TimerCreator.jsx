@@ -52,6 +52,7 @@ class TimerCreator extends Component {
           onClick={() => {
             this.handleClick();
           }}
+          style={{ marginTop: '1rem' }}
         >
           Create timer
         </Button>
