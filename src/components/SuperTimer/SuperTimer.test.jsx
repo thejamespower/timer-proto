@@ -15,7 +15,7 @@ describe('SuperTimer', () => {
         durationInSeconds: 0,
         active: false,
         currentCount: null,
-        timeElapsed: 0,
+        elapsedTime: 0,
         complete: false,
       },
       startSuperTimer: () => null,

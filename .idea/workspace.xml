@@ -8,8 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/reducer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/SuperTimer.test.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/main.4a7fef7e.chunk.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +56,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="4" />
+  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -87,11 +95,12 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
-    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -117,7 +126,7 @@
       <recent name="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.js" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.calculateTimeToStartInSeconds.test.js">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -183,7 +192,7 @@
       <test-file value="$PROJECT_DIR$/src/lib/convertSecondsToDuration.test.js" />
       <method v="2" />
     </configuration>
-    <configuration name="getTotalDurationInSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="reducer.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -191,7 +200,7 @@
       <jest-options value="--watch" />
       <envs />
       <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.test.js" />
+      <test-file value="$PROJECT_DIR$/src/reducer.test.js" />
       <method v="2" />
     </configuration>
     <configuration name="timersComplete.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -223,20 +232,20 @@
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Timer" />
-      <item itemvalue="Jest.getTotalDurationInSeconds.test.js" />
       <item itemvalue="Jest.convertDurationToSeconds.test.js" />
       <item itemvalue="Jest.convertSecondsToDuration.test.js" />
       <item itemvalue="Jest.timersComplete.test.js" />
-      <item itemvalue="npm.npm start" />
       <item itemvalue="Jest.calculateTimeToStartInSeconds.test.js" />
+      <item itemvalue="Jest.reducer.test.js" />
+      <item itemvalue="npm.npm start" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.reducer.test.js" />
         <item itemvalue="Jest.calculateTimeToStartInSeconds.test.js" />
         <item itemvalue="Jest.timersComplete.test.js" />
         <item itemvalue="Jest.convertSecondsToDuration.test.js" />
         <item itemvalue="Jest.convertDurationToSeconds.test.js" />
-        <item itemvalue="Jest.getTotalDurationInSeconds.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +298,8 @@
       <workItem from="1567510156243" duration="47000" />
       <workItem from="1638981727312" duration="2086000" />
       <workItem from="1638984318954" duration="5917000" />
-      <workItem from="1639043935492" duration="2658000" />
+      <workItem from="1639043935492" duration="6900000" />
+      <workItem from="1639057320267" duration="9615000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -508,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639046249598</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fix TIMER_DELETE action">
+      <created>1639047167560</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1639047167560</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -579,7 +596,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/core-web-engine" />
     </ignored-roots>
-    <MESSAGE value="New timer component, fix timetostart" />
     <MESSAGE value="Delete a timer" />
     <MESSAGE value="Make a bit prettier" />
     <MESSAGE value="Working timers (before controlled and onComplete)" />
@@ -604,7 +620,8 @@
     <MESSAGE value="Update tests" />
     <MESSAGE value="Update reducer" />
     <MESSAGE value="Update dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update dependency" />
+    <MESSAGE value="Fix TIMER_DELETE action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix TIMER_DELETE action" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
