@@ -1,6 +1,6 @@
 import convertSecondsToDuration from './convertSecondsToDuration';
 
-const timersNewStart = (elapsedTime, totalTime) => x => {
+const updateTimerOnTick = (elapsedTime, totalTime) => x => {
   const timeToStartInSeconds = Math.max(
     0,
     totalTime - x.durationInSeconds - elapsedTime,
@@ -13,4 +13,4 @@ const timersNewStart = (elapsedTime, totalTime) => x => {
   };
 };
 
-export default timersNewStart;
+export default updateTimerOnTick;

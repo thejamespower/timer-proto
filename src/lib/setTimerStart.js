@@ -1,9 +1,9 @@
 import convertSecondsToDuration from './convertSecondsToDuration';
 
-const timersStart = total => x => ({
+const setTimerStart = total => x => ({
   ...x,
   timeToStartInSeconds: total - x.durationInSeconds,
   timeToStart: convertSecondsToDuration(total - x.durationInSeconds),
 });
 
-export default timersStart;
+export default setTimerStart;

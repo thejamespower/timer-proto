@@ -1,6 +1,6 @@
-import timersComplete from './timersComplete';
+import completeTimer from './completeTimer';
 
-describe('timersComplete', () => {
+describe('completeTimer', () => {
   describe('given x', () => {
     const x = {
       id: '1',
@@ -10,7 +10,7 @@ describe('timersComplete', () => {
 
     const assertCommon = id => {
       it('destructures x', () => {
-        expect(timersComplete(id)(x).id).toEqual('1');
+        expect(completeTimer(id)(x).id).toEqual('1');
       });
     };
 
@@ -20,11 +20,11 @@ describe('timersComplete', () => {
       assertCommon(id);
 
       it('sets property complete to true', () => {
-        expect(timersComplete(id)(x).complete).toEqual(true);
+        expect(completeTimer(id)(x).complete).toEqual(true);
       });
 
       it('sets property active to false', () => {
-        expect(timersComplete(id)(x).active).toEqual(false);
+        expect(completeTimer(id)(x).active).toEqual(false);
       });
     });
 
@@ -34,7 +34,7 @@ describe('timersComplete', () => {
       assertCommon(id);
 
       it('returns x', () => {
-        expect(timersComplete(id)(x)).toEqual(x);
+        expect(completeTimer(id)(x)).toEqual(x);
       });
     });
   });

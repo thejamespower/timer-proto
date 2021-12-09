@@ -1,4 +1,4 @@
-const timersComplete = id => x =>
+const completeTimer = id => x =>
   x.id !== id
     ? x
     : {
@@ -7,4 +7,4 @@ const timersComplete = id => x =>
         active: false,
       };
 
-export default timersComplete;
+export default completeTimer;

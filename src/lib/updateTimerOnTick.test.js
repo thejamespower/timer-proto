@@ -1,4 +1,4 @@
-import timersNewStart from './timersNewStart';
+import updateTimerOnTick from './updateTimerOnTick';
 import convertSecondsToDuration from './convertSecondsToDuration';
 
 jest.mock('./convertSecondsToDuration');
@@ -20,19 +20,19 @@ describe('timersNewStart', () => {
 
     const assertCommon = (totalTime, timeToStart) => {
       it('returns destructured x', () => {
-        const run = timersNewStart(elapsedTime, totalTime)(x);
+        const run = updateTimerOnTick(elapsedTime, totalTime)(x);
         expect(run).toEqual(expect.objectContaining({ durationInSeconds: 10 }));
       });
 
       it('returns property timeToStartInSeconds', () => {
-        const run = timersNewStart(elapsedTime, totalTime)(x);
+        const run = updateTimerOnTick(elapsedTime, totalTime)(x);
         expect(run).toEqual(
           expect.objectContaining({ timeToStartInSeconds: timeToStart }),
         );
       });
 
       it('returns property timeToStart', () => {
-        const run = timersNewStart(elapsedTime, totalTime)(x);
+        const run = updateTimerOnTick(elapsedTime, totalTime)(x);
         expect(run).toEqual(expect.objectContaining({ timeToStart }));
       });
     };
@@ -43,7 +43,7 @@ describe('timersNewStart', () => {
       assertCommon(totalTime, totalTime - x.durationInSeconds - elapsedTime);
 
       it('returns property active = false', () => {
-        const run = timersNewStart(elapsedTime, totalTime)(x);
+        const run = updateTimerOnTick(elapsedTime, totalTime)(x);
         expect(run).toEqual(expect.objectContaining({ active: false }));
       });
     });
@@ -54,7 +54,7 @@ describe('timersNewStart', () => {
       assertCommon(totalTime, totalTime - x.durationInSeconds - elapsedTime);
 
       it('returns property active = true', () => {
-        const run = timersNewStart(elapsedTime, totalTime)(x);
+        const run = updateTimerOnTick(elapsedTime, totalTime)(x);
         expect(run).toEqual(expect.objectContaining({ active: true }));
       });
     });

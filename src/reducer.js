@@ -11,9 +11,9 @@ import {
 import convertDurationToSeconds from './lib/convertDurationToSeconds';
 import convertSecondsToDuration from './lib/convertSecondsToDuration';
 import getTotalDurationInSeconds from './lib/getTotalDurationInSeconds';
-import timersNewStart from './lib/timersNewStart';
-import timersStart from './lib/timersStart';
-import timersComplete from './lib/timersComplete';
+import updateTimerOnTick from './lib/updateTimerOnTick';
+import setTimerStart from './lib/setTimerStart';
+import completeTimer from './lib/completeTimer';
 
 const InitialState = new Record({
   timers: [],
@@ -55,7 +55,7 @@ const timersReducers = handleActions(
 
       const oldTimers = state.get('timers');
       const transformedOldTimers = oldTimers.map(
-        timersStart(totalDurationInSeconds),
+        setTimerStart(totalDurationInSeconds),
       );
       const newTimersToAdd = [...transformedOldTimers, newTimerToAdd];
 
@@ -78,7 +78,9 @@ const timersReducers = handleActions(
         ...state.get('timers').filter(x => x.id !== action.payload),
       ];
       const totalDurationInSeconds = getTotalDurationInSeconds(timers);
-      const transformedTimers = timers.map(timersStart(totalDurationInSeconds));
+      const transformedTimers = timers.map(
+        setTimerStart(totalDurationInSeconds),
+      );
       return state
         .set('timers', transformedTimers)
         .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds)
@@ -90,7 +92,7 @@ const timersReducers = handleActions(
 
     [TIMER_COMPLETE]: (state, action) => {
       const timers = [
-        ...state.get('timers').map(timersComplete(action.payload)),
+        ...state.get('timers').map(completeTimer(action.payload)),
       ];
       return state.set('timers', timers);
     },
@@ -100,7 +102,7 @@ const timersReducers = handleActions(
         const timeElapsed = s.getIn(['superTimer', 'timeElapsed']);
         const timers = s.get('timers');
         const totalTime = s.getIn(['superTimer', 'durationInSeconds']);
-        const newTimers = timers.map(timersNewStart(timeElapsed, totalTime));
+        const newTimers = timers.map(updateTimerOnTick(timeElapsed, totalTime));
         return s.setIn(['superTimer', 'active'], true).set('timers', newTimers);
       };
       return state.timers.length === 0 ? state : start(state);
@@ -112,7 +114,7 @@ const timersReducers = handleActions(
         state.getIn(['superTimer', 'durationInSeconds']) - currentCount;
       const timers = state.get('timers');
       const totalTime = state.getIn(['superTimer', 'durationInSeconds']);
-      const newTimers = timers.map(timersNewStart(timeElapsed, totalTime));
+      const newTimers = timers.map(updateTimerOnTick(timeElapsed, totalTime));
       return state
         .setIn(['superTimer', 'currentCount'], currentCount)
         .setIn(['superTimer', 'timeElapsed'], timeElapsed)

@@ -1,4 +1,4 @@
-import timersStart from './timersStart';
+import setTimerStart from './setTimerStart';
 import convertSecondsToDuration from './convertSecondsToDuration';
 
 jest.mock('./convertSecondsToDuration');
@@ -21,19 +21,19 @@ describe('timerStart', () => {
       };
 
       it('returns destructured x', () => {
-        const run = timersStart(total)(x);
+        const run = setTimerStart(total)(x);
         expect(run).toEqual(expect.objectContaining({ durationInSeconds: 10 }));
       });
 
       it('returns property timeToStartInSeconds', () => {
-        const run = timersStart(total)(x);
+        const run = setTimerStart(total)(x);
         expect(run).toEqual(
           expect.objectContaining({ timeToStartInSeconds: 90 }),
         );
       });
 
       it('returns property timeToStart', () => {
-        const run = timersStart(total)(x);
+        const run = setTimerStart(total)(x);
         expect(run).toEqual(expect.objectContaining({ timeToStart: 90 }));
       });
     });
