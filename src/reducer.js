@@ -35,7 +35,7 @@ const tickTimers = (timers, elapsedTime, totalTime) =>
 const reducer = handleActions(
   {
     [TIMER_CREATE]: (state, { payload }) => {
-      if (payload.duration === '00:00:00') {
+      if (payload.duration === '00:00:00' || state.superTimer.active) {
         return state;
       }
 
@@ -47,7 +47,7 @@ const reducer = handleActions(
       };
 
       // Add new timers to list
-      const newTimers = [...state.get('timers'), timer];
+      const newTimers = [...state.timers, timer];
 
       const totalDurationInSeconds = getTotalDurationInSeconds(newTimers);
 
@@ -61,7 +61,7 @@ const reducer = handleActions(
         ),
       };
 
-      const oldTimers = state.get('timers');
+      const oldTimers = state.timers;
 
       // Calculate old timers new start times
       const oldTimersWithNewStartTimes = oldTimers.map(
@@ -84,12 +84,12 @@ const reducer = handleActions(
     },
 
     [TIMER_DELETE]: (state, { payload }) => {
-      if (!payload || state.getIn(['superTimer', 'active'])) {
+      if (!payload || state.superTimer.active) {
         return state;
       }
 
       // Get timers to keep
-      const timers = [...state.get('timers').filter(x => x.id !== payload)];
+      const timers = [...state.timers.filter(x => x.id !== payload)];
 
       const totalDurationInSeconds = getTotalDurationInSeconds(timers);
 
@@ -108,7 +108,7 @@ const reducer = handleActions(
     },
 
     [TIMER_COMPLETE]: (state, { payload }) => {
-      const timers = [...state.get('timers').map(completeTimer(payload))];
+      const timers = [...state.timers.map(completeTimer(payload))];
       return state.set('timers', timers);
     },
 
@@ -117,10 +117,10 @@ const reducer = handleActions(
         return state;
       }
       const elapsedTime =
-        state.getIn(['superTimer', 'durationInSeconds']) -
-        (state.getIn(['superTimer', 'currentCount']) || 0);
-      const timers = state.get('timers');
-      const totalTime = state.getIn(['superTimer', 'durationInSeconds']);
+        state.superTimer.durationInSeconds -
+        (state.superTimer.currentCount || 0);
+      const { timers } = state;
+      const totalTime = state.superTimer.durationInSeconds;
       const newTimers = tickTimers(timers, elapsedTime, totalTime);
       return state
         .setIn(['superTimer', 'active'], true)
@@ -132,10 +132,9 @@ const reducer = handleActions(
         return state;
       }
 
-      const elapsedTime =
-        state.getIn(['superTimer', 'durationInSeconds']) - payload;
-      const timers = state.get('timers');
-      const totalTime = state.getIn(['superTimer', 'durationInSeconds']);
+      const elapsedTime = state.superTimer.durationInSeconds - payload;
+      const { timers } = state;
+      const totalTime = state.superTimer.durationInSeconds;
       const newTimers = tickTimers(timers, elapsedTime, totalTime);
       return state
         .setIn(['superTimer', 'currentCount'], payload)
