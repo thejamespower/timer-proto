@@ -24,7 +24,7 @@ describe('timersNewStart', () => {
         expect(run).toEqual(expect.objectContaining({ durationInSeconds: 10 }));
       });
 
-      it('returns property timeToStartInSeconds', () => {
+      it('returns property calculateTimeToStartInSeconds', () => {
         const run = updateTimerOnTick(elapsedTime, totalTime)(x);
         expect(run).toEqual(
           expect.objectContaining({ timeToStartInSeconds: timeToStart }),
@@ -37,7 +37,7 @@ describe('timersNewStart', () => {
       });
     };
 
-    describe('given timeToStartInSeconds != 0', () => {
+    describe('given calculateTimeToStartInSeconds != 0', () => {
       const totalTime = 200;
 
       assertCommon(totalTime, totalTime - x.durationInSeconds - elapsedTime);
@@ -48,7 +48,7 @@ describe('timersNewStart', () => {
       });
     });
 
-    describe('given timeToStartInSeconds = 0', () => {
+    describe('given calculateTimeToStartInSeconds = 0', () => {
       const totalTime = 110;
 
       assertCommon(totalTime, totalTime - x.durationInSeconds - elapsedTime);

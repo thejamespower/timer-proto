@@ -8,11 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/lib/startTimer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/setTimerStart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/startTimer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/setTimerStart.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/startTimerWithNewTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateTimerOnTick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/startTimerWithNewTime.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateTimerOnTick.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/__snapshots__/SuperTimer.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/__snapshots__/SuperTimer.test.jsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimeField/__snapshots__/TimeField.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/__snapshots__/TimeField.test.jsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/setTimerStart.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/setTimerStart.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/updateTimerOnTick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateTimerOnTick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/updateTimerOnTick.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateTimerOnTick.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,14 +119,14 @@
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.js" />
       <recent name="$PROJECT_DIR$/src/lib/timersComplete.js" />
       <recent name="$PROJECT_DIR$/src/lib/timersStart.js" />
       <recent name="$PROJECT_DIR$/src/lib/timersNewStart.js" />
       <recent name="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.js" />
-      <recent name="$PROJECT_DIR$/src/lib/convertSecondsToDuration.js" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.timersComplete.test.js">
+  <component name="RunManager" selected="Jest.calculateTimeToStartInSeconds.test.js">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -151,6 +157,17 @@
       <jest-options value="--watch" />
       <envs />
       <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="calculateTimeToStartInSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.test.js" />
       <method v="2" />
     </configuration>
     <configuration name="convertDurationToSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -197,16 +214,6 @@
       <test-file value="$PROJECT_DIR$/src/lib/timersComplete.test.js" />
       <method v="2" />
     </configuration>
-    <configuration name="timersNewStart.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/lib/timersNewStart.test.js" />
-      <method v="2" />
-    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -225,20 +232,20 @@
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Timer" />
-      <item itemvalue="Jest.timersNewStart.test.js" />
       <item itemvalue="Jest.getTotalDurationInSeconds.test.js" />
       <item itemvalue="Jest.convertDurationToSeconds.test.js" />
       <item itemvalue="Jest.convertSecondsToDuration.test.js" />
       <item itemvalue="Jest.timersComplete.test.js" />
       <item itemvalue="npm.npm start" />
+      <item itemvalue="Jest.calculateTimeToStartInSeconds.test.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.calculateTimeToStartInSeconds.test.js" />
         <item itemvalue="Jest.timersComplete.test.js" />
         <item itemvalue="Jest.convertSecondsToDuration.test.js" />
         <item itemvalue="Jest.convertDurationToSeconds.test.js" />
         <item itemvalue="Jest.getTotalDurationInSeconds.test.js" />
-        <item itemvalue="Jest.timersNewStart.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +298,7 @@
       <workItem from="1567510156243" duration="47000" />
       <workItem from="1638981727312" duration="2086000" />
       <workItem from="1638984318954" duration="5917000" />
-      <workItem from="1639043935492" duration="671000" />
+      <workItem from="1639043935492" duration="1136000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -482,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639044340184</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Rename lib functions">
+      <created>1639044626352</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1639044626352</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">

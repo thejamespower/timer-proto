@@ -1,9 +1,11 @@
 import convertSecondsToDuration from './convertSecondsToDuration';
+import calculateTimeToStartInSeconds from './calculateTimeToStartInSeconds';
 
 const updateTimerOnTick = (elapsedTime, totalTime) => x => {
-  const timeToStartInSeconds = Math.max(
-    0,
-    totalTime - x.durationInSeconds - elapsedTime,
+  const timeToStartInSeconds = calculateTimeToStartInSeconds(
+    totalTime,
+    x.durationInSeconds,
+    elapsedTime,
   );
   return {
     ...x,

@@ -53,7 +53,7 @@ exports[`TimerCreator render renders 1`] = `
         }
       >
         <label
-          htmlFor="undefined-undefined-Time-36590"
+          htmlFor="undefined-undefined-Time-4750"
           style={
             Object {
               "color": "#666",
@@ -74,7 +74,7 @@ exports[`TimerCreator render renders 1`] = `
         </label>
         <input
           disabled={false}
-          id="undefined-undefined-Time-36590"
+          id="undefined-undefined-Time-4750"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -151,6 +151,7 @@ exports[`TimerCreator render renders 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
+    onContextMenu={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}

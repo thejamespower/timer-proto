@@ -25,7 +25,7 @@ describe('timerStart', () => {
         expect(run).toEqual(expect.objectContaining({ durationInSeconds: 10 }));
       });
 
-      it('returns property timeToStartInSeconds', () => {
+      it('returns property calculateTimeToStartInSeconds', () => {
         const run = setTimerStart(total)(x);
         expect(run).toEqual(
           expect.objectContaining({ timeToStartInSeconds: 90 }),
