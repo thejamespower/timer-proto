@@ -31,56 +31,69 @@ const initialState = new InitialState();
 
 const timersReducers = handleActions(
   {
-    [TIMER_CREATE]: (state, action) => {
+    [TIMER_CREATE]: (state, { payload }) => {
+      if (payload.duration === 0) {
+        return state;
+      }
+
       const timer = {
-        ...action.payload,
-        durationInSeconds: convertDurationToSeconds(action.payload.duration),
+        ...payload,
+        durationInSeconds: convertDurationToSeconds(payload.duration),
         active: false,
         complete: false,
       };
+
+      // Add new timers to list
       const newTimers = [...state.get('timers'), timer];
 
       const totalDurationInSeconds = getTotalDurationInSeconds(newTimers);
 
-      const newTimerToAdd = {
+      // Calculate new timer start time
+      const newTimerWithStartTime = {
         ...timer,
         timeToStartInSeconds:
-          totalDurationInSeconds -
-          convertDurationToSeconds(action.payload.duration),
+          totalDurationInSeconds - convertDurationToSeconds(payload.duration),
         timeToStart: convertSecondsToDuration(
-          totalDurationInSeconds -
-            convertDurationToSeconds(action.payload.duration),
+          totalDurationInSeconds - convertDurationToSeconds(payload.duration),
         ),
       };
 
       const oldTimers = state.get('timers');
-      const transformedOldTimers = oldTimers.map(
+
+      // Calculate old timers new start times
+      const oldTimersWithNewStartTimes = oldTimers.map(
         setTimerStart(totalDurationInSeconds),
       );
-      const newTimersToAdd = [...transformedOldTimers, newTimerToAdd];
 
-      return action.payload.duration === 0
-        ? state
-        : state
-            .set('timers', newTimersToAdd)
-            .setIn(
-              ['superTimer', 'duration'],
-              convertSecondsToDuration(totalDurationInSeconds),
-            )
-            .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds);
+      const newTimersWithStartTimes = [
+        ...oldTimersWithNewStartTimes,
+        newTimerWithStartTime,
+      ];
+
+      return state
+        .set('timers', newTimersWithStartTimes)
+        .setIn(
+          ['superTimer', 'duration'],
+          convertSecondsToDuration(totalDurationInSeconds),
+        )
+        .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds);
     },
 
-    [TIMER_DELETE]: (state, action) => {
-      if (!action.payload.length || state.getIn(['superTimer', 'active'])) {
+    [TIMER_DELETE]: (state, { payload }) => {
+      if (payload.length || state.getIn(['superTimer', 'active'])) {
         return state;
       }
-      const timers = [
-        ...state.get('timers').filter(x => x.id !== action.payload),
-      ];
+
+      // Get timers to keep
+      const timers = [...state.get('timers').filter(x => x.id !== payload)];
+
       const totalDurationInSeconds = getTotalDurationInSeconds(timers);
+
+      // Set timers new start time
       const transformedTimers = timers.map(
         setTimerStart(totalDurationInSeconds),
       );
+
       return state
         .set('timers', transformedTimers)
         .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds)
@@ -90,10 +103,8 @@ const timersReducers = handleActions(
         );
     },
 
-    [TIMER_COMPLETE]: (state, action) => {
-      const timers = [
-        ...state.get('timers').map(completeTimer(action.payload)),
-      ];
+    [TIMER_COMPLETE]: (state, { payload }) => {
+      const timers = [...state.get('timers').map(completeTimer(payload))];
       return state.set('timers', timers);
     },
 
@@ -108,8 +119,8 @@ const timersReducers = handleActions(
       return state.timers.length === 0 ? state : start(state);
     },
 
-    [SUPER_TIMER_TICK]: (state, action) => {
-      const currentCount = action.payload;
+    [SUPER_TIMER_TICK]: (state, { payload }) => {
+      const currentCount = payload;
       const timeElapsed =
         state.getIn(['superTimer', 'durationInSeconds']) - currentCount;
       const timers = state.get('timers');

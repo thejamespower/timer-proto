@@ -8,17 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuperTimer/__snapshots__/SuperTimer.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperTimer/__snapshots__/SuperTimer.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimeField/__snapshots__/TimeField.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeField/__snapshots__/TimeField.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/__snapshots__/TimerCreator.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerDeleteButton/__snapshots__/TimerDeleteButton.test.jsx.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/setTimerStart.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/setTimerStart.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/updateTimerOnTick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateTimerOnTick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/updateTimerOnTick.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateTimerOnTick.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +289,7 @@
       <workItem from="1567510156243" duration="47000" />
       <workItem from="1638981727312" duration="2086000" />
       <workItem from="1638984318954" duration="5917000" />
-      <workItem from="1639043935492" duration="1136000" />
+      <workItem from="1639043935492" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -496,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639044626352</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Update tests">
+      <created>1639045114546</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1639045114546</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -567,7 +565,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/core-web-engine" />
     </ignored-roots>
-    <MESSAGE value="Create a list of non-active timers with names" />
     <MESSAGE value="Work out timeToStart for timers" />
     <MESSAGE value="SuperTimer" />
     <MESSAGE value="New timer component, fix timetostart" />
@@ -592,7 +589,8 @@
     <MESSAGE value="SuperTimer tests" />
     <MESSAGE value="Update" />
     <MESSAGE value="Rename lib functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename lib functions" />
+    <MESSAGE value="Update tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
