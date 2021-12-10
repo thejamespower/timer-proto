@@ -9,10 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Router/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router/Router.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AddItem/AddItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AddItem/container.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AddItem/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +80,7 @@
     <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -298,6 +297,8 @@
       <workItem from="1638984318954" duration="5917000" />
       <workItem from="1639043935492" duration="6900000" />
       <workItem from="1639057320267" duration="9615000" />
+      <workItem from="1639126934154" duration="59000" />
+      <workItem from="1639130070373" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -530,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639068439959</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Remove old route">
+      <created>1639068553625</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1639068553625</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Improve reducer">
+      <created>1639076867059</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1639076867059</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -601,8 +616,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/core-web-engine" />
     </ignored-roots>
-    <MESSAGE value="Make a bit prettier" />
-    <MESSAGE value="Working timers (before controlled and onComplete)" />
     <MESSAGE value="Complete timer and superTimer, rename action and creators" />
     <MESSAGE value="Fix bug in deleting a single timer, refactor TimerDeleteButton, shell test" />
     <MESSAGE value="Basic snapshots for default props" />
@@ -626,7 +639,20 @@
     <MESSAGE value="Update dependency" />
     <MESSAGE value="Fix TIMER_DELETE action" />
     <MESSAGE value="Basic layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic layout" />
+    <MESSAGE value="Remove old route" />
+    <MESSAGE value="Improve reducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve reducer" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx</url>
+          <line>56</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

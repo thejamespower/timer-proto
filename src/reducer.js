@@ -141,6 +141,7 @@ const reducer = handleActions(
         .setIn(['superTimer', 'elapsedTime'], elapsedTime)
         .set('timers', newTimers);
     },
+
     [SUPER_TIMER_COMPLETE]: state =>
       state
         .setIn(['superTimer', 'complete'], true)
