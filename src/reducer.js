@@ -124,23 +124,6 @@ const reducer = handleActions(
       // Add new timers to list
       const newTimers = [...state.timers, subTimer];
 
-      // const totalDurationInSeconds = getTotalDurationInSeconds(newTimers);
-      //
-      // // Calculate new timer start time
-      // const newSubTimerWithStartTime = {
-      //   ...subTimer,
-      //   timeToStartInSeconds:
-      //     totalDurationInSeconds - convertDurationToSeconds(payload.offset),
-      //   timeToStart: convertSecondsToDuration(
-      //     totalDurationInSeconds - convertDurationToSeconds(payload.offset),
-      //   ),
-      // };
-
-      // const newTimersWithStartTimes = [
-      //   ...state.timers,
-      //   newSubTimerWithStartTime,
-      // ];
-
       return state.set('timers', newTimers);
     },
 
