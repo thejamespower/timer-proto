@@ -12,6 +12,7 @@ describe('TimerCreator', () => {
   beforeEach(() => {
     props = {
       createTimer: () => null,
+      createSubTimer: () => null,
       name: 'test',
     };
   });

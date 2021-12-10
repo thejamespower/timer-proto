@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import TimerCreator from './TimerCreator';
-import { createTimer } from '../../action-creators';
+import { createTimer, createSubTimer } from '../../action-creators';
 
 const mapStateToProps = null;
 
@@ -10,6 +10,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       createTimer,
+      createSubTimer,
     },
     dispatch,
   );

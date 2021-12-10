@@ -1,6 +1,7 @@
 import { Record } from 'immutable';
 import reducer, { InitialState } from './reducer';
 import {
+  SUB_TIMER_CREATE,
   SUPER_TIMER_START,
   SUPER_TIMER_TICK,
   TIMER_COMPLETE,
@@ -8,7 +9,7 @@ import {
   TIMER_DELETE,
 } from './action-types';
 
-const TimerState = ({ active, inProgress = true }) =>
+const TimerState = ({ active, inProgress = true, subTimer = null }) =>
   new Record({
     superTimer: {
       active,
@@ -37,6 +38,21 @@ const TimerState = ({ active, inProgress = true }) =>
         timeToStart: '00:00:00',
         timeToStartInSeconds: 0,
       },
+      ...(subTimer
+        ? [
+            {
+              active: false,
+              complete: false,
+              offset: '00:01:00',
+              offsetInSeconds: 60,
+              duration: '00:01:00',
+              durationInSeconds: 60,
+              id: 'subTimer A',
+              timeToStart: '00:00:00',
+              timeToStartInSeconds: 0,
+            },
+          ]
+        : []),
     ],
   });
 
@@ -89,6 +105,7 @@ describe('reducer', () => {
           payload: {
             duration: '00:01:00',
             id: '1',
+            name: 'sub timer 1',
           },
         };
         const newState = reducer(state, action);
@@ -110,6 +127,7 @@ describe('reducer', () => {
                 duration: '00:01:00',
                 durationInSeconds: 60,
                 id: '1',
+                name: 'sub timer 1',
                 timeToStart: '00:00:00',
                 timeToStartInSeconds: 0,
               },
@@ -165,12 +183,58 @@ describe('reducer', () => {
         });
       });
 
+      describe('when payload duration is zero value ("00:00:00")', () => {
+        const action = {
+          type: TIMER_CREATE,
+          payload: {
+            duration: '00:00:00',
+            id: '1',
+            name: 'timer 1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
           type: TIMER_CREATE,
           payload: {
             duration: '00:01:00',
             id: '1',
+            name: 'timer 1',
           },
         };
         const newState = reducer(state, action);
@@ -210,8 +274,189 @@ describe('reducer', () => {
                 duration: '00:01:00',
                 durationInSeconds: 60,
                 id: '1',
+                name: 'timer 1',
                 timeToStart: '00:01:00',
                 timeToStartInSeconds: 60,
+              },
+            ],
+          });
+        });
+      });
+    });
+
+    describe('given inactive state with subTimers', () => {
+      const state = TimerState({ active: false, subTimer: true })();
+
+      describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
+        const action = {
+          type: TIMER_CREATE,
+          payload: {
+            duration: '00:00:00',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: 'subTimer A',
+                offset: '00:01:00',
+                offsetInSeconds: 60,
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+
+      describe('when payload duration is zero value ("00:00:00")', () => {
+        const action = {
+          type: TIMER_CREATE,
+          payload: {
+            duration: '00:00:00',
+            id: '1',
+            name: 'timer 1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: 'subTimer A',
+                offset: '00:01:00',
+                offsetInSeconds: 60,
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+
+      describe('when payload duration is non-zero value ("00:01:00")', () => {
+        const action = {
+          type: TIMER_CREATE,
+          payload: {
+            duration: '00:03:00',
+            id: '3',
+            name: 'timer 3',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 180,
+              duration: '00:03:00',
+              durationInSeconds: 180,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:02:00',
+                timeToStartInSeconds: 120,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:01:00',
+                timeToStartInSeconds: 60,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: 'subTimer A',
+                offset: '00:01:00',
+                offsetInSeconds: 60,
+                timeToStart: '00:01:00',
+                timeToStartInSeconds: 60,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:03:00',
+                durationInSeconds: 180,
+                id: '3',
+                name: 'timer 3',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
               },
             ],
           });
@@ -270,6 +515,388 @@ describe('reducer', () => {
           type: TIMER_CREATE,
           payload: {
             duration: '00:01:00',
+            id: '3',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: true,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: true,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+    });
+  });
+
+  describe('SUB_TIMER_CREATE', () => {
+    describe('given initial state', () => {
+      const state = new InitialState();
+
+      describe('when reducing new state from action with payload offset is zero value ("00:00:00")', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:00:00',
+            name: 'sub timer 1',
+            id: '1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: null,
+              duration: '00:00:00',
+              durationInSeconds: 0,
+              elapsedTime: 0,
+            },
+            timers: [],
+          });
+        });
+      });
+
+      describe('when payload offset is non-zero value ("00:01:00")', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:00:00',
+            name: 'sub timer 1',
+            id: '1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: null,
+              duration: '00:00:00',
+              durationInSeconds: 0,
+              elapsedTime: 0,
+            },
+            timers: [],
+          });
+        });
+      });
+
+      describe('when payload contains no name', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:00:00',
+            id: '1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: null,
+              duration: '00:00:00',
+              durationInSeconds: 0,
+              elapsedTime: 0,
+            },
+            timers: [],
+          });
+        });
+      });
+    });
+
+    describe('given inactive state', () => {
+      const state = TimerState({ active: false })();
+
+      describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:01:00',
+            duration: '00:01:00',
+            id: '1',
+            name: 'sub timer 1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                name: 'sub timer 1',
+                offset: '00:01:00',
+                offsetInSeconds: 60,
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+
+      describe('when payload duration is non-zero value ("00:01:00")', () => {
+        const action = {
+          type: TIMER_CREATE,
+          payload: {
+            duration: '00:01:00',
+            id: '3',
+            name: 'timer 3',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 120,
+              duration: '00:02:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:01:00',
+                timeToStartInSeconds: 60,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '3',
+                name: 'timer 3',
+                timeToStart: '00:01:00',
+                timeToStartInSeconds: 60,
+              },
+            ],
+          });
+        });
+      });
+
+      describe('when payload contains no name', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:01:00',
+            id: '3',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+    });
+
+    describe('given active state', () => {
+      const state = TimerState({ active: true })();
+
+      describe('when reducing new state from action with payload offset is zero value ("00:00:00")', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            duration: '00:00:00',
+            id: '1',
+            name: 'sub timer 1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: true,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: true,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+
+      describe('when payload duration is non-zero value ("00:01:00")', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:01:00',
+            id: '1',
+            name: 'sub timer 1',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: true,
+              complete: false,
+              currentCount: 90,
+              duration: '00:01:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: true,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+
+      describe('when payload contains no name', () => {
+        const action = {
+          type: SUB_TIMER_CREATE,
+          payload: {
+            offset: '00:01:00',
             id: '3',
           },
         };

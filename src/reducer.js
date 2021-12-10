@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { Record } from 'immutable';
 import {
+  SUB_TIMER_CREATE,
   SUPER_TIMER_COMPLETE,
   SUPER_TIMER_START,
   SUPER_TIMER_TICK,
@@ -14,6 +15,8 @@ import getTotalDurationInSeconds from './lib/getTotalDurationInSeconds';
 import updateTimerOnTick from './lib/updateTimerOnTick';
 import setTimerStart from './lib/setTimerStart';
 import completeTimer from './lib/completeTimer';
+
+const uuid = require('uuid/v4');
 
 export const InitialState = new Record({
   timers: [],
@@ -35,12 +38,17 @@ const tickTimers = (timers, elapsedTime, totalTime) =>
 const reducer = handleActions(
   {
     [TIMER_CREATE]: (state, { payload }) => {
-      if (payload.duration === '00:00:00' || state.superTimer.active) {
+      if (
+        payload.duration === '00:00:00' ||
+        state.superTimer.active ||
+        !payload.name
+      ) {
         return state;
       }
 
       const timer = {
         ...payload,
+        id: payload.id || uuid(),
         durationInSeconds: convertDurationToSeconds(payload.duration),
         active: false,
         complete: false,
@@ -81,6 +89,45 @@ const reducer = handleActions(
           convertSecondsToDuration(totalDurationInSeconds),
         )
         .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds);
+    },
+
+    [SUB_TIMER_CREATE]: (state, { payload }) => {
+      if (!state.timers.length || state.superTimer.active || !payload.name) {
+        return state;
+      }
+
+      const subTimer = {
+        ...payload,
+        id: payload.id || uuid(),
+        active: false,
+        complete: false,
+        durationInSeconds: convertDurationToSeconds(payload.duration),
+        offsetInSeconds: convertDurationToSeconds(payload.offset),
+        timeToStart: '00:00:00',
+        timeToStartInSeconds: 0,
+      };
+
+      // Add new timers to list
+      const newTimers = [...state.timers, subTimer];
+
+      // const totalDurationInSeconds = getTotalDurationInSeconds(newTimers);
+      //
+      // // Calculate new timer start time
+      // const newSubTimerWithStartTime = {
+      //   ...subTimer,
+      //   timeToStartInSeconds:
+      //     totalDurationInSeconds - convertDurationToSeconds(payload.offset),
+      //   timeToStart: convertSecondsToDuration(
+      //     totalDurationInSeconds - convertDurationToSeconds(payload.offset),
+      //   ),
+      // };
+
+      // const newTimersWithStartTimes = [
+      //   ...state.timers,
+      //   newSubTimerWithStartTime,
+      // ];
+
+      return state.set('timers', newTimers);
     },
 
     [TIMER_DELETE]: (state, { payload }) => {

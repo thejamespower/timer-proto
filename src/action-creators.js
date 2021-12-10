@@ -2,6 +2,7 @@ import { createAction } from 'redux-actions';
 
 import {
   TIMER_CREATE,
+  SUB_TIMER_CREATE,
   SUPER_TIMER_START,
   TIMER_DELETE,
   SUPER_TIMER_TICK,
@@ -10,6 +11,7 @@ import {
 } from './action-types';
 
 const createTimer = payload => createAction(TIMER_CREATE)(payload);
+const createSubTimer = payload => createAction(SUB_TIMER_CREATE)(payload);
 const deleteTimer = payload => createAction(TIMER_DELETE)(payload);
 const completeTimer = payload => createAction(TIMER_COMPLETE)(payload);
 const startSuperTimer = payload => createAction(SUPER_TIMER_START)(payload);
@@ -19,6 +21,7 @@ const completeSuperTimer = payload =>
 
 export {
   createTimer,
+  createSubTimer,
   deleteTimer,
   completeTimer,
   startSuperTimer,

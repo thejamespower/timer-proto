@@ -4,6 +4,8 @@ import Button from '@material-ui/core/Button';
 
 import { TextField } from '@material-ui/core';
 import CustomTimeField from '../TimeField';
+import convertSecondsToDuration from '../../lib/convertSecondsToDuration';
+import convertDurationToSeconds from '../../lib/convertDurationToSeconds';
 
 const uuid = require('uuid/v4');
 
@@ -12,6 +14,7 @@ const zeroDuration = '00:00:00';
 class TimerCreator extends Component {
   static propTypes = {
     createTimer: PropTypes.func.isRequired,
+    createSubTimer: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
   };
 
@@ -25,7 +28,7 @@ class TimerCreator extends Component {
     this.changeDuration = this.changeDuration.bind(this);
     this.addTimerToSuperTimer = this.addTimerToSuperTimer.bind(this);
     this.createSubTimer = this.createSubTimer.bind(this);
-    this.changeSubTimerOffset = this.changeSubTimerOffset.bind(this);
+    this.changeSubTimerDuration = this.changeSubTimerDuration.bind(this);
     this.changeSubTimerName = this.changeSubTimerName.bind(this);
   }
 
@@ -33,14 +36,14 @@ class TimerCreator extends Component {
     this.setState({ duration });
   }
 
-  changeSubTimerOffset(subTimer, offset) {
+  changeSubTimerDuration(subTimer, duration) {
     const { subTimers } = this.state;
     this.setState({
       subTimers: subTimers.map(timer =>
         timer.id === subTimer.id
           ? {
               ...timer,
-              offset,
+              duration,
             }
           : timer,
       ),
@@ -62,23 +65,29 @@ class TimerCreator extends Component {
   }
 
   addTimerToSuperTimer() {
-    const { createTimer, name } = this.props;
+    const { createTimer, name, createSubTimer } = this.props;
     const { duration, subTimers } = this.state;
 
     if (duration === zeroDuration) return;
 
+    const parentId = uuid();
+
     createTimer({
       duration,
-      id: uuid(),
+      id: parentId,
       name,
     });
 
-    subTimers.map(timer =>
-      createTimer({
-        duration: null,
+    subTimers.map(subTimer =>
+      createSubTimer({
+        duration: subTimer.duration,
         id: uuid(),
-        name: timer.name,
-        offset: timer.offset,
+        parentId,
+        name: `${subTimer.name} ${name}`,
+        offset: convertSecondsToDuration(
+          convertDurationToSeconds(duration) -
+            convertDurationToSeconds(subTimer.duration),
+        ),
       }),
     );
   }
@@ -90,8 +99,8 @@ class TimerCreator extends Component {
       subTimers: [
         ...subTimers,
         {
-          duration: null,
           offset: zeroDuration,
+          duration: zeroDuration,
           id: uuid(),
           name: '',
         },
@@ -136,8 +145,8 @@ class TimerCreator extends Component {
               margin="normal"
             />
             <CustomTimeField
-              value={subTimer.offset}
-              onChange={value => this.changeSubTimerOffset(subTimer, value)}
+              value={subTimer.duration}
+              onChange={value => this.changeSubTimerDuration(subTimer, value)}
             />
           </div>
         ))}

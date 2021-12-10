@@ -9,8 +9,14 @@
   <component name="ChangeListManager">
     <list default="true" id="60b59e4b-7408-4e27-b3fb-49309de0829d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action-creators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-creators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimerCreator/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimerCreator/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/setTimerStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/setTimerStart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +129,7 @@
       <recent name="$PROJECT_DIR$/src/lib/getTotalDurationInSeconds.js" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Jest.reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;).returns correct state">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -147,6 +153,17 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="TimerCreator.test.jsx" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.test.jsx" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerJest">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -156,37 +173,56 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="calculateTimeToStartInSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <jest-options value="--watch" />
       <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/lib/calculateTimeToStartInSeconds.test.js" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/reducer.test.js" />
+      <test-names>
+        <test-name value="reducer" />
+        <test-name value="TIMER_CREATE" />
+        <test-name value="given inactive state with subTimers" />
+        <test-name value="when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="convertDurationToSeconds.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;).returns correct state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <jest-options value="--watch" />
       <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/lib/convertDurationToSeconds.test.js" />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/reducer.test.js" />
+      <test-names>
+        <test-name value="reducer" />
+        <test-name value="TIMER_CREATE" />
+        <test-name value="given inactive state with subTimers" />
+        <test-name value="when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+        <test-name value="returns correct state" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="convertSecondsToDuration.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="reducer.TIMER_CREATE.given inactive state.when payload duration is non-zero value (&quot;00:01:00&quot;)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <jest-options value="--watch" />
       <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/lib/convertSecondsToDuration.test.js" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/reducer.test.js" />
+      <test-names>
+        <test-name value="reducer" />
+        <test-name value="TIMER_CREATE" />
+        <test-name value="given inactive state" />
+        <test-name value="when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="reducer.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -198,17 +234,6 @@
       <envs />
       <scope-kind value="TEST_FILE" />
       <test-file value="$PROJECT_DIR$/src/reducer.test.js" />
-      <method v="2" />
-    </configuration>
-    <configuration name="timersComplete.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <jest-options value="--watch" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/lib/timersComplete.test.js" />
       <method v="2" />
     </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -229,20 +254,20 @@
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Jest.All Tests" />
       <item itemvalue="Jest.Timer" />
-      <item itemvalue="Jest.convertDurationToSeconds.test.js" />
-      <item itemvalue="Jest.convertSecondsToDuration.test.js" />
-      <item itemvalue="Jest.timersComplete.test.js" />
-      <item itemvalue="Jest.calculateTimeToStartInSeconds.test.js" />
       <item itemvalue="Jest.reducer.test.js" />
       <item itemvalue="npm.npm start" />
+      <item itemvalue="Jest.TimerCreator.test.jsx" />
+      <item itemvalue="Jest.reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+      <item itemvalue="Jest.reducer.TIMER_CREATE.given inactive state.when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+      <item itemvalue="Jest.reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;).returns correct state" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Jest.reducer.test.js" />
-        <item itemvalue="Jest.calculateTimeToStartInSeconds.test.js" />
-        <item itemvalue="Jest.timersComplete.test.js" />
-        <item itemvalue="Jest.convertSecondsToDuration.test.js" />
-        <item itemvalue="Jest.convertDurationToSeconds.test.js" />
+        <item itemvalue="Jest.reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;).returns correct state" />
+        <item itemvalue="Jest.reducer.TIMER_CREATE.given inactive state.when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+        <item itemvalue="Jest.reducer.TIMER_CREATE.given inactive state with subTimers.when payload duration is non-zero value (&quot;00:01:00&quot;)" />
+        <item itemvalue="Jest.TimerCreator.test.jsx" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +323,7 @@
       <workItem from="1639043935492" duration="6900000" />
       <workItem from="1639057320267" duration="9615000" />
       <workItem from="1639126934154" duration="59000" />
-      <workItem from="1639130070373" duration="78000" />
+      <workItem from="1639130070373" duration="6710000" />
     </task>
     <task id="LOCAL-00001" summary="TimerList basic">
       <created>1541332888000</created>
@@ -545,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639076867059</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Sub timer UI">
+      <created>1639130280409</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1639130280409</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -616,7 +648,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/core-web-engine" />
     </ignored-roots>
-    <MESSAGE value="Complete timer and superTimer, rename action and creators" />
     <MESSAGE value="Fix bug in deleting a single timer, refactor TimerDeleteButton, shell test" />
     <MESSAGE value="Basic snapshots for default props" />
     <MESSAGE value="Basic snaps" />
@@ -641,15 +672,17 @@
     <MESSAGE value="Basic layout" />
     <MESSAGE value="Remove old route" />
     <MESSAGE value="Improve reducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve reducer" />
+    <MESSAGE value="Sub timer UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sub timer UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/TimerCreator/TimerCreator.jsx</url>
-          <line>56</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/src/lib/setTimerStart.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
