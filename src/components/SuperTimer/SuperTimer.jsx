@@ -16,6 +16,8 @@ class SuperTimer extends Component {
       active: PropTypes.bool.isRequired,
       complete: PropTypes.bool.isRequired,
       currentCount: PropTypes.number,
+      endTime: PropTypes.string.isRequired,
+      startTime: PropTypes.string.isRequired,
     }).isRequired,
     startSuperTimer: PropTypes.func.isRequired,
     tickSuperTimer: PropTypes.func.isRequired,
@@ -32,11 +34,13 @@ class SuperTimer extends Component {
 
   shouldComponentUpdate(nextProps) {
     const {
-      superTimer: { duration, active },
+      superTimer: { duration, active, endTime, startTime },
     } = this.props;
     return (
       nextProps.superTimer.duration !== duration ||
-      nextProps.superTimer.active !== active
+      nextProps.superTimer.active !== active ||
+      nextProps.superTimer.endTime !== endTime ||
+      nextProps.superTimer.startTime !== startTime
     );
   }
 
@@ -61,12 +65,18 @@ class SuperTimer extends Component {
 
   render() {
     const { superTimer } = this.props;
-    const { duration, active, complete } = superTimer;
+    const { duration, active, complete, endTime, startTime } = superTimer;
     return (
       <Card>
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             Total: {duration}
+          </Typography>
+          <Typography color="textSecondary" gutterBottom>
+            Start time: {startTime || 'Not set'}
+          </Typography>
+          <Typography color="textSecondary" gutterBottom>
+            End time: {endTime || 'Not set'}
           </Typography>
           {active && (
             <Countdown
@@ -80,6 +90,7 @@ class SuperTimer extends Component {
           )}
           {complete && <p>All done!</p>}
         </CardContent>
+
         {(!active || !complete) && (
           <CardActions>
             <Button

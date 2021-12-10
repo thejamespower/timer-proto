@@ -10,6 +10,8 @@ import {
 
 const mapStateToProps = state => ({
   superTimer: state.timers.superTimer,
+  endTime: state.timers.endTime,
+  startTime: state.timers.startTime,
 });
 
 const mapDispatchToProps = dispatch =>

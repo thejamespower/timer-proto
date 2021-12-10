@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Timer from '../Timer';
-import SuperTimer from '../SuperTimer';
 
 function TimerList(props) {
   const { timers } = props;
@@ -11,7 +10,6 @@ function TimerList(props) {
       {timers.map(timer => (
         <Timer key={timer.id} timer={timer} />
       ))}
-      <SuperTimer />
     </div>
   );
 }

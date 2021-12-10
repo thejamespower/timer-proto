@@ -8,6 +8,7 @@ import {
   SUPER_TIMER_TICK,
   TIMER_COMPLETE,
   SUPER_TIMER_COMPLETE,
+  END_TIME_SET,
 } from './action-types';
 
 const createTimer = payload => createAction(TIMER_CREATE)(payload);
@@ -18,6 +19,7 @@ const startSuperTimer = payload => createAction(SUPER_TIMER_START)(payload);
 const tickSuperTimer = payload => createAction(SUPER_TIMER_TICK)(payload);
 const completeSuperTimer = payload =>
   createAction(SUPER_TIMER_COMPLETE)(payload);
+const setEndTime = payload => createAction(END_TIME_SET)(payload);
 
 export {
   createTimer,
@@ -27,4 +29,5 @@ export {
   startSuperTimer,
   tickSuperTimer,
   completeSuperTimer,
+  setEndTime,
 };

@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { Record } from 'immutable';
 import {
+  END_TIME_SET,
   SUB_TIMER_CREATE,
   SUPER_TIMER_COMPLETE,
   SUPER_TIMER_START,
@@ -21,6 +22,8 @@ const uuid = require('uuid/v4');
 export const InitialState = new Record({
   timers: [],
   superTimer: {
+    endTime: null,
+    startTime: null,
     duration: '00:00:00',
     durationInSeconds: 0,
     active: false,
@@ -34,6 +37,12 @@ const initialState = new InitialState();
 
 const tickTimers = (timers, elapsedTime, totalTime) =>
   timers.map(updateTimerOnTick(elapsedTime, totalTime));
+
+const calculateStartTime = (endTime, durationInSeconds) => {
+  return convertSecondsToDuration(
+    convertDurationToSeconds(endTime) - durationInSeconds,
+  );
+};
 
 const reducer = handleActions(
   {
@@ -81,6 +90,10 @@ const reducer = handleActions(
         newTimerWithStartTime,
       ];
 
+      const startTime = state.superTimer.endTime
+        ? calculateStartTime(state.superTimer.endTime, totalDurationInSeconds)
+        : state.superTimer.startTime;
+
       return state
         .set('timers', newTimersWithStartTimes)
         .setIn(['superTimer', 'currentCount'], totalDurationInSeconds)
@@ -88,7 +101,8 @@ const reducer = handleActions(
           ['superTimer', 'duration'],
           convertSecondsToDuration(totalDurationInSeconds),
         )
-        .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds);
+        .setIn(['superTimer', 'durationInSeconds'], totalDurationInSeconds)
+        .setIn(['superTimer', 'startTime'], startTime);
     },
 
     [SUB_TIMER_CREATE]: (state, { payload }) => {
@@ -193,6 +207,16 @@ const reducer = handleActions(
       state
         .setIn(['superTimer', 'complete'], true)
         .setIn(['superTimer', 'active'], false),
+
+    [END_TIME_SET]: (state, { payload }) => {
+      const startTime = calculateStartTime(
+        payload,
+        state.superTimer.durationInSeconds,
+      );
+      return state
+        .setIn(['superTimer', 'endTime'], payload)
+        .setIn(['superTimer', 'startTime'], startTime);
+    },
   },
   initialState,
 );

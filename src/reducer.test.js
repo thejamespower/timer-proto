@@ -1,6 +1,7 @@
 import { Record } from 'immutable';
 import reducer, { InitialState } from './reducer';
 import {
+  END_TIME_SET,
   SUB_TIMER_CREATE,
   SUPER_TIMER_START,
   SUPER_TIMER_TICK,
@@ -9,13 +10,14 @@ import {
   TIMER_DELETE,
 } from './action-types';
 
-const TimerState = ({ active, inProgress = true, subTimer = null }) =>
+const TimerState = ({ active, inProgress = true, subTimer = null, endTime }) =>
   new Record({
     superTimer: {
+      endTime,
       active,
       complete: false,
       currentCount: inProgress ? 90 : 120,
-      duration: '00:01:00',
+      duration: '00:02:00',
       durationInSeconds: 120,
       elapsedTime: inProgress ? 30 : 0,
     },
@@ -59,15 +61,17 @@ const TimerState = ({ active, inProgress = true, subTimer = null }) =>
 describe('reducer', () => {
   it('returns initialState', () => {
     expect(reducer(undefined, {}).toJS()).toEqual({
-      timers: [],
       superTimer: {
+        endTime: null,
+        startTime: null,
+        active: false,
+        complete: false,
+        currentCount: null,
         duration: '00:00:00',
         durationInSeconds: 0,
-        active: false,
-        currentCount: null,
         elapsedTime: 0,
-        complete: false,
       },
+      timers: [],
     });
   });
 
@@ -85,17 +89,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            timers: [],
-            superTimer: {
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              active: false,
-              currentCount: null,
-              elapsedTime: 0,
-              complete: false,
-            },
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
 
@@ -119,6 +113,8 @@ describe('reducer', () => {
               duration: '00:01:00',
               durationInSeconds: 60,
               elapsedTime: 0,
+              endTime: null,
+              startTime: null,
             },
             timers: [
               {
@@ -150,36 +146,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: 90,
-              duration: '00:01:00',
-              durationInSeconds: 120,
-              elapsedTime: 30,
-            },
-            timers: [
-              {
-                active: false,
-                complete: false,
-                duration: '00:01:00',
-                durationInSeconds: 60,
-                id: '1',
-                timeToStart: '00:00:30',
-                timeToStartInSeconds: 30,
-              },
-              {
-                active: false,
-                complete: false,
-                duration: '00:02:00',
-                durationInSeconds: 120,
-                id: '2',
-                timeToStart: '00:00:00',
-                timeToStartInSeconds: 0,
-              },
-            ],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
 
@@ -195,36 +162,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: 90,
-              duration: '00:01:00',
-              durationInSeconds: 120,
-              elapsedTime: 30,
-            },
-            timers: [
-              {
-                active: false,
-                complete: false,
-                duration: '00:01:00',
-                durationInSeconds: 60,
-                id: '1',
-                timeToStart: '00:00:30',
-                timeToStartInSeconds: 30,
-              },
-              {
-                active: false,
-                complete: false,
-                duration: '00:02:00',
-                durationInSeconds: 120,
-                id: '2',
-                timeToStart: '00:00:00',
-                timeToStartInSeconds: 0,
-              },
-            ],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
 
@@ -284,6 +222,67 @@ describe('reducer', () => {
       });
     });
 
+    describe('given inactive state with endTime', () => {
+      const state = TimerState({ active: false, endTime: '10:00:00' })();
+
+      describe('when payload duration is non-zero value ("02:00:00")', () => {
+        const action = {
+          type: TIMER_CREATE,
+          payload: {
+            duration: '02:00:00',
+            id: '2hr',
+            name: 'timer 2 hour',
+          },
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              endTime: '10:00:00',
+              startTime: '08:00:00',
+              active: false,
+              complete: false,
+              currentCount: 7200,
+              duration: '02:00:00',
+              durationInSeconds: 7200,
+              elapsedTime: 30,
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '01:59:00',
+                timeToStartInSeconds: 7140,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '01:58:00',
+                timeToStartInSeconds: 7080,
+              },
+              {
+                active: false,
+                complete: false,
+                duration: '02:00:00',
+                durationInSeconds: 7200,
+                id: '2hr',
+                name: 'timer 2 hour',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+    });
+
     describe('given inactive state with subTimers', () => {
       const state = TimerState({ active: false, subTimer: true })();
 
@@ -302,9 +301,10 @@ describe('reducer', () => {
               active: false,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -358,9 +358,10 @@ describe('reducer', () => {
               active: false,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -482,9 +483,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -526,9 +528,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -572,17 +575,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: null,
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              elapsedTime: 0,
-            },
-            timers: [],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
 
@@ -598,17 +591,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: null,
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              elapsedTime: 0,
-            },
-            timers: [],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
 
@@ -623,17 +606,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: null,
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              elapsedTime: 0,
-            },
-            timers: [],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -659,9 +632,10 @@ describe('reducer', () => {
               active: false,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -770,9 +744,10 @@ describe('reducer', () => {
               active: false,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -819,9 +794,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -864,9 +840,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -908,9 +885,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -950,36 +928,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: 90,
-              duration: '00:01:00',
-              durationInSeconds: 120,
-              elapsedTime: 30,
-            },
-            timers: [
-              {
-                active: false,
-                complete: false,
-                duration: '00:01:00',
-                durationInSeconds: 60,
-                id: '1',
-                timeToStart: '00:00:30',
-                timeToStartInSeconds: 30,
-              },
-              {
-                active: false,
-                complete: false,
-                duration: '00:02:00',
-                durationInSeconds: 120,
-                id: '2',
-                timeToStart: '00:00:00',
-                timeToStartInSeconds: 0,
-              },
-            ],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -1000,9 +949,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1078,17 +1028,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            timers: [],
-            superTimer: {
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              active: false,
-              currentCount: null,
-              elapsedTime: 0,
-              complete: false,
-            },
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -1109,9 +1049,10 @@ describe('reducer', () => {
               active: false,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1154,9 +1095,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1195,17 +1137,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            timers: [],
-            superTimer: {
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              active: false,
-              currentCount: null,
-              elapsedTime: 0,
-              complete: false,
-            },
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -1225,9 +1157,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 120,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 0,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1264,36 +1197,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: true,
-              complete: false,
-              currentCount: 120,
-              duration: '00:01:00',
-              durationInSeconds: 120,
-              elapsedTime: 0,
-            },
-            timers: [
-              {
-                active: false,
-                complete: false,
-                duration: '00:01:00',
-                durationInSeconds: 60,
-                id: '1',
-                timeToStart: '00:01:00',
-                timeToStartInSeconds: 60,
-              },
-              {
-                active: true,
-                complete: false,
-                duration: '00:02:00',
-                durationInSeconds: 120,
-                id: '2',
-                timeToStart: '00:00:00',
-                timeToStartInSeconds: 0,
-              },
-            ],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -1313,9 +1217,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 90,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 30,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1357,17 +1262,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            timers: [],
-            superTimer: {
-              duration: '00:00:00',
-              durationInSeconds: 0,
-              active: false,
-              currentCount: null,
-              elapsedTime: 0,
-              complete: false,
-            },
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -1383,36 +1278,7 @@ describe('reducer', () => {
         const newState = reducer(state, action);
 
         it('returns correct state', () => {
-          expect(newState.toJS()).toEqual({
-            superTimer: {
-              active: false,
-              complete: false,
-              currentCount: 120,
-              duration: '00:01:00',
-              durationInSeconds: 120,
-              elapsedTime: 0,
-            },
-            timers: [
-              {
-                active: false,
-                complete: false,
-                duration: '00:01:00',
-                durationInSeconds: 60,
-                id: '1',
-                timeToStart: '00:01:00',
-                timeToStartInSeconds: 60,
-              },
-              {
-                active: false,
-                complete: false,
-                duration: '00:02:00',
-                durationInSeconds: 120,
-                id: '2',
-                timeToStart: '00:00:00',
-                timeToStartInSeconds: 0,
-              },
-            ],
-          });
+          expect(newState.toJS()).toEqual(state.toJS());
         });
       });
     });
@@ -1433,9 +1299,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 119,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 1,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1478,9 +1345,10 @@ describe('reducer', () => {
               active: true,
               complete: false,
               currentCount: 89,
-              duration: '00:01:00',
+              duration: '00:02:00',
               durationInSeconds: 120,
               elapsedTime: 31,
+              endTime: undefined,
             },
             timers: [
               {
@@ -1494,6 +1362,55 @@ describe('reducer', () => {
               },
               {
                 active: true,
+                complete: false,
+                duration: '00:02:00',
+                durationInSeconds: 120,
+                id: '2',
+                timeToStart: '00:00:00',
+                timeToStartInSeconds: 0,
+              },
+            ],
+          });
+        });
+      });
+    });
+  });
+
+  describe('END_TIME_SET', () => {
+    describe('given endTime state', () => {
+      const state = TimerState({ active: false, endTime: '10:00:00' })();
+
+      describe('when reducing new state from action', () => {
+        const action = {
+          type: END_TIME_SET,
+          payload: '11:00:00',
+        };
+        const newState = reducer(state, action);
+
+        it('returns correct state', () => {
+          expect(newState.toJS()).toEqual({
+            superTimer: {
+              active: false,
+              complete: false,
+              currentCount: 90,
+              duration: '00:02:00',
+              durationInSeconds: 120,
+              elapsedTime: 30,
+              endTime: '11:00:00',
+              startTime: '10:58:00',
+            },
+            timers: [
+              {
+                active: false,
+                complete: false,
+                duration: '00:01:00',
+                durationInSeconds: 60,
+                id: '1',
+                timeToStart: '00:00:30',
+                timeToStartInSeconds: 30,
+              },
+              {
+                active: false,
                 complete: false,
                 duration: '00:02:00',
                 durationInSeconds: 120,
