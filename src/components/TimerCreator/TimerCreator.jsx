@@ -11,19 +11,21 @@ const uuid = require('uuid/v4');
 
 const zeroDuration = '00:00:00';
 
+const initialState = {
+  duration: zeroDuration,
+  subTimers: [],
+  name: '',
+};
+
 class TimerCreator extends Component {
   static propTypes = {
     createTimer: PropTypes.func.isRequired,
     createSubTimer: PropTypes.func.isRequired,
-    name: PropTypes.string.isRequired,
   };
 
   constructor(props) {
     super(props);
-    this.state = {
-      duration: zeroDuration,
-      subTimers: [],
-    };
+    this.state = initialState;
 
     this.changeDuration = this.changeDuration.bind(this);
     this.addTimerToSuperTimer = this.addTimerToSuperTimer.bind(this);
@@ -65,8 +67,8 @@ class TimerCreator extends Component {
   }
 
   addTimerToSuperTimer() {
-    const { createTimer, name, createSubTimer } = this.props;
-    const { duration, subTimers } = this.state;
+    const { createTimer, createSubTimer } = this.props;
+    const { duration, subTimers, name } = this.state;
 
     if (duration === zeroDuration) return;
 
@@ -90,6 +92,8 @@ class TimerCreator extends Component {
         ),
       }),
     );
+
+    this.setState(initialState);
   }
 
   createSubTimer() {
@@ -116,11 +120,28 @@ class TimerCreator extends Component {
     });
   }
 
+  handleChange(name) {
+    return event => {
+      this.setState({
+        [name]: event.target.value,
+      });
+    };
+  }
+
   render() {
-    const { duration, subTimers } = this.state;
+    const { duration, subTimers, name } = this.state;
 
     return (
       <div>
+        <TextField
+          style={{ width: '100%' }}
+          id="item-name"
+          label="Name"
+          value={name}
+          onChange={this.handleChange('name')}
+          margin="normal"
+        />
+
         <CustomTimeField value={duration} onChange={this.changeDuration} />
 
         {subTimers.map(subTimer => (
