@@ -2,13 +2,13 @@ import { handleActions } from 'redux-actions';
 import { Record } from 'immutable';
 import {
   END_TIME_SET,
-  SUB_TIMER_CREATE,
-  SUPER_TIMER_COMPLETE,
-  SUPER_TIMER_START,
-  SUPER_TIMER_TICK,
-  TIMER_COMPLETE,
-  TIMER_CREATE,
-  TIMER_DELETE,
+  SUB_TIMER_CREATED,
+  SUPER_TIMER_COMPLETED,
+  SUPER_TIMER_STARTED,
+  SUPER_TIMER_TICKED,
+  TIMER_COMPLETED,
+  TIMER_CREATED,
+  TIMER_DELETED,
 } from './action-types';
 import convertDurationToSeconds from './lib/convertDurationToSeconds';
 import convertSecondsToDuration from './lib/convertSecondsToDuration';
@@ -46,7 +46,7 @@ const calculateStartTime = (endTime, durationInSeconds) => {
 
 const reducer = handleActions(
   {
-    [TIMER_CREATE]: (state, { payload }) => {
+    [TIMER_CREATED]: (state, { payload }) => {
       if (
         payload.duration === '00:00:00' ||
         state.superTimer.active ||
@@ -105,7 +105,7 @@ const reducer = handleActions(
         .setIn(['superTimer', 'startTime'], startTime);
     },
 
-    [SUB_TIMER_CREATE]: (state, { payload }) => {
+    [SUB_TIMER_CREATED]: (state, { payload }) => {
       if (!state.timers.length || state.superTimer.active || !payload.name) {
         return state;
       }
@@ -127,7 +127,7 @@ const reducer = handleActions(
       return state.set('timers', newTimers);
     },
 
-    [TIMER_DELETE]: (state, { payload }) => {
+    [TIMER_DELETED]: (state, { payload }) => {
       if (!payload || state.superTimer.active) {
         return state;
       }
@@ -151,12 +151,12 @@ const reducer = handleActions(
         );
     },
 
-    [TIMER_COMPLETE]: (state, { payload }) => {
+    [TIMER_COMPLETED]: (state, { payload }) => {
       const timers = [...state.timers.map(completeTimer(payload))];
       return state.set('timers', timers);
     },
 
-    [SUPER_TIMER_START]: state => {
+    [SUPER_TIMER_STARTED]: state => {
       if (state.timers.length === 0 || state.superTimer.active) {
         return state;
       }
@@ -171,7 +171,7 @@ const reducer = handleActions(
         .set('timers', newTimers);
     },
 
-    [SUPER_TIMER_TICK]: (state, { payload }) => {
+    [SUPER_TIMER_TICKED]: (state, { payload }) => {
       if (state.timers.length === 0 || !state.superTimer.active) {
         return state;
       }
@@ -186,7 +186,7 @@ const reducer = handleActions(
         .set('timers', newTimers);
     },
 
-    [SUPER_TIMER_COMPLETE]: state =>
+    [SUPER_TIMER_COMPLETED]: state =>
       state
         .setIn(['superTimer', 'complete'], true)
         .setIn(['superTimer', 'active'], false),

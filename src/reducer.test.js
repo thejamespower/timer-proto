@@ -2,12 +2,12 @@ import { Record } from 'immutable';
 import reducer, { InitialState } from './reducer';
 import {
   END_TIME_SET,
-  SUB_TIMER_CREATE,
-  SUPER_TIMER_START,
-  SUPER_TIMER_TICK,
-  TIMER_COMPLETE,
-  TIMER_CREATE,
-  TIMER_DELETE,
+  SUB_TIMER_CREATED,
+  SUPER_TIMER_STARTED,
+  SUPER_TIMER_TICKED,
+  TIMER_COMPLETED,
+  TIMER_CREATED,
+  TIMER_DELETED,
 } from './action-types';
 
 const TimerState = ({ active, inProgress = true, subTimer = null, endTime }) =>
@@ -75,13 +75,13 @@ describe('reducer', () => {
     });
   });
 
-  describe('TIMER_CREATE', () => {
+  describe('TIMER_CREATED', () => {
     describe('given initial state', () => {
       const state = new InitialState();
 
       describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:00:00',
           },
@@ -95,7 +95,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:01:00',
             id: '1',
@@ -138,7 +138,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:00:00',
           },
@@ -152,7 +152,7 @@ describe('reducer', () => {
 
       describe('when payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:00:00',
             id: '1',
@@ -168,7 +168,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:01:00',
             id: '1',
@@ -227,7 +227,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("02:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '02:00:00',
             id: '2hr',
@@ -288,7 +288,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:00:00',
           },
@@ -343,7 +343,7 @@ describe('reducer', () => {
 
       describe('when payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:00:00',
             id: '1',
@@ -400,7 +400,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:03:00',
             id: '3',
@@ -470,7 +470,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:00:00',
           },
@@ -514,7 +514,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:01:00',
             id: '3',
@@ -559,13 +559,13 @@ describe('reducer', () => {
     });
   });
 
-  describe('SUB_TIMER_CREATE', () => {
+  describe('SUB_TIMER_CREATED', () => {
     describe('given initial state', () => {
       const state = new InitialState();
 
       describe('when reducing new state from action with payload offset is zero value ("00:00:00")', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:00:00',
             name: 'sub timer 1',
@@ -581,7 +581,7 @@ describe('reducer', () => {
 
       describe('when payload offset is non-zero value ("00:01:00")', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:00:00',
             name: 'sub timer 1',
@@ -597,7 +597,7 @@ describe('reducer', () => {
 
       describe('when payload contains no name', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:00:00',
             id: '1',
@@ -616,7 +616,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with payload duration is zero value ("00:00:00")', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:01:00',
             duration: '00:01:00',
@@ -675,7 +675,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
-          type: TIMER_CREATE,
+          type: TIMER_CREATED,
           payload: {
             duration: '00:01:00',
             id: '3',
@@ -730,7 +730,7 @@ describe('reducer', () => {
 
       describe('when payload contains no name', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:01:00',
             id: '3',
@@ -779,7 +779,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with payload offset is zero value ("00:00:00")', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             duration: '00:00:00',
             id: '1',
@@ -825,7 +825,7 @@ describe('reducer', () => {
 
       describe('when payload duration is non-zero value ("00:01:00")', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:01:00',
             id: '1',
@@ -871,7 +871,7 @@ describe('reducer', () => {
 
       describe('when payload contains no name', () => {
         const action = {
-          type: SUB_TIMER_CREATE,
+          type: SUB_TIMER_CREATED,
           payload: {
             offset: '00:01:00',
             id: '3',
@@ -916,13 +916,13 @@ describe('reducer', () => {
     });
   });
 
-  describe('TIMER_DELETE', () => {
+  describe('TIMER_DELETED', () => {
     describe('given any state', () => {
       const state = TimerState({ active: false })();
 
       describe('when reducing new state from action with no id given', () => {
         const action = {
-          type: TIMER_DELETE,
+          type: TIMER_DELETED,
           payload: '',
         };
         const newState = reducer(state, action);
@@ -938,7 +938,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with id given', () => {
         const action = {
-          type: TIMER_DELETE,
+          type: TIMER_DELETED,
           payload: '1',
         };
         const newState = reducer(state, action);
@@ -984,7 +984,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with id given', () => {
         const action = {
-          type: TIMER_DELETE,
+          type: TIMER_DELETED,
           payload: '1',
         };
         const newState = reducer(state, action);
@@ -1016,13 +1016,13 @@ describe('reducer', () => {
     });
   });
 
-  describe('TIMER_COMPLETE', () => {
+  describe('TIMER_COMPLETED', () => {
     describe('given no timer state', () => {
       const state = new InitialState();
 
       describe('when reducing new state from action with id given', () => {
         const action = {
-          type: TIMER_COMPLETE,
+          type: TIMER_COMPLETED,
           payload: '1',
         };
         const newState = reducer(state, action);
@@ -1038,7 +1038,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with id given', () => {
         const action = {
-          type: TIMER_COMPLETE,
+          type: TIMER_COMPLETED,
           payload: '1',
         };
         const newState = reducer(state, action);
@@ -1084,7 +1084,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action with id given', () => {
         const action = {
-          type: TIMER_COMPLETE,
+          type: TIMER_COMPLETED,
           payload: '1',
         };
         const newState = reducer(state, action);
@@ -1126,13 +1126,13 @@ describe('reducer', () => {
     });
   });
 
-  describe('SUPER_TIMER_START', () => {
+  describe('SUPER_TIMER_STARTED', () => {
     describe('given no timer state', () => {
       const state = new InitialState();
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_START,
+          type: SUPER_TIMER_STARTED,
         };
         const newState = reducer(state, action);
 
@@ -1147,7 +1147,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_START,
+          type: SUPER_TIMER_STARTED,
         };
         const newState = reducer(state, action);
 
@@ -1192,7 +1192,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_START,
+          type: SUPER_TIMER_STARTED,
         };
         const newState = reducer(state, action);
 
@@ -1207,7 +1207,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_START,
+          type: SUPER_TIMER_STARTED,
         };
         const newState = reducer(state, action);
 
@@ -1248,13 +1248,13 @@ describe('reducer', () => {
     });
   });
 
-  describe('SUPER_TIMER_TICK', () => {
+  describe('SUPER_TIMER_TICKED', () => {
     describe('given no timer state', () => {
       const state = new InitialState();
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_TICK,
+          type: SUPER_TIMER_TICKED,
           payload: {
             currentCount: 89,
           },
@@ -1272,7 +1272,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_TICK,
+          type: SUPER_TIMER_TICKED,
           payload: { currentCount: 119 },
         };
         const newState = reducer(state, action);
@@ -1288,7 +1288,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_TICK,
+          type: SUPER_TIMER_TICKED,
           payload: 119,
         };
         const newState = reducer(state, action);
@@ -1334,7 +1334,7 @@ describe('reducer', () => {
 
       describe('when reducing new state from action', () => {
         const action = {
-          type: SUPER_TIMER_TICK,
+          type: SUPER_TIMER_TICKED,
           payload: 89,
         };
         const newState = reducer(state, action);

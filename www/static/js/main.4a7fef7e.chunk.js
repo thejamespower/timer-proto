@@ -76,7 +76,7 @@
       };
       const y = Object(f.a)(
         ((a = {}),
-        Object(h.a)(a, 'TIMER_CREATE', function(e, t) {
+        Object(h.a)(a, 'TIMER_CREATED', function(e, t) {
           const n = Object(b.a)({}, t.payload, {
             durationInSeconds: E(t.payload.duration),
             active: !1,
@@ -97,7 +97,7 @@
                 .setIn(['superTimer', 'duration'], T(r))
                 .setIn(['superTimer', 'durationInSeconds'], r);
         }),
-        Object(h.a)(a, 'TIMER_DELETE', function(e, t) {
+        Object(h.a)(a, 'TIMER_DELETED', function(e, t) {
           if (!t.payload.length || e.getIn(['superTimer', 'active'])) return e;
           const n = Object(v.a)(
             e.get('timers').filter(function(e) {
@@ -111,7 +111,7 @@
             .setIn(['superTimer', 'durationInSeconds'], a)
             .setIn(['superTimer', 'duration'], T(a));
         }),
-        Object(h.a)(a, 'TIMER_COMPLETE', function(e, t) {
+        Object(h.a)(a, 'TIMER_COMPLETED', function(e, t) {
           let n;
           const a = Object(v.a)(
             e.get('timers').map(
@@ -125,7 +125,7 @@
           );
           return e.set('timers', a);
         }),
-        Object(h.a)(a, 'SUPER_TIMER_START', function(e) {
+        Object(h.a)(a, 'SUPER_TIMER_STARTED', function(e) {
           return e.timers.length === 0
             ? e
             : (function(e) {
@@ -136,7 +136,7 @@
                 return e.setIn(['superTimer', 'active'], !0).set('timers', r);
               })(e);
         }),
-        Object(h.a)(a, 'SUPER_TIMER_TICK', function(e, t) {
+        Object(h.a)(a, 'SUPER_TIMER_TICKED', function(e, t) {
           const n = t.payload;
           const a = e.getIn(['superTimer', 'durationInSeconds']) - n;
           const r = e.get('timers');
@@ -147,7 +147,7 @@
             .setIn(['superTimer', 'elapsedTime'], a)
             .set('timers', c);
         }),
-        Object(h.a)(a, 'SUPER_TIMER_COMPLETE', function(e) {
+        Object(h.a)(a, 'SUPER_TIMER_COMPLETED', function(e) {
           return e
             .setIn(['superTimer', 'complete'], !0)
             .setIn(['superTimer', 'active'], !1);
@@ -333,22 +333,22 @@
       })(r.Component);
       const re = n(537);
       const ie = function(e) {
-        return Object(re.a)('TIMER_CREATE')(e);
+        return Object(re.a)('TIMER_CREATED')(e);
       };
       const ce = function(e) {
-        return Object(re.a)('TIMER_DELETE')(e);
+        return Object(re.a)('TIMER_DELETED')(e);
       };
       const oe = function(e) {
-        return Object(re.a)('TIMER_COMPLETE')(e);
+        return Object(re.a)('TIMER_COMPLETED')(e);
       };
       const le = function(e) {
-        return Object(re.a)('SUPER_TIMER_START')(e);
+        return Object(re.a)('SUPER_TIMER_STARTED')(e);
       };
       const ue = function(e) {
-        return Object(re.a)('SUPER_TIMER_TICK')(e);
+        return Object(re.a)('SUPER_TIMER_TICKED')(e);
       };
       const se = function(e) {
-        return Object(re.a)('SUPER_TIMER_COMPLETE')(e);
+        return Object(re.a)('SUPER_TIMER_COMPLETED')(e);
       };
       const me = Object(l.connect)(null, function(e) {
         return Object(u.b)({ createTimer: ie }, e);
